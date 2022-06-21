@@ -1,5 +1,5 @@
 .header {
-	padding: 19px 19px 12px 19px;
+	padding: 19px 19px 16px 19px;
 	background-color: #363e43;
 	
 }
@@ -12,7 +12,7 @@
 	display: block;
 	color: #a5adb8;
 	text-transform: uppercase;
-	margin-bottom: -3px;
+	margin-bottom: -6px;
 	margin-left: 2px;
 	text-shadow: 1px 1px rgba(0, 0, 0, 5%);
 }
@@ -28,8 +28,6 @@
 .header__logo-desc {
 	font: 700 0.75rem "Arial";
 	color: #656f7a;
-	height: 15px;
-	overflow: hidden;
 }
 .header__search {
 	display: block;

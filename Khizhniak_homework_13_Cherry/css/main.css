@@ -1,7 +1,7 @@
 article {
 	float: left;
 	max-width: 746px;
-	padding-left: 28px;
+	padding-left: 27px;
 	width: 100%;	
 
 }
@@ -102,7 +102,6 @@ article {
 	color: #6b6f74;
 	font: 400 0.875rem "Arial";
 }
-
 .main__articles-list-item li {
 	line-height: 23px;
 }
@@ -122,9 +121,8 @@ list-style: none;
 	margin-left: 11px;
 }
 
-
 main {
-	padding-bottom: 57px;
+	padding-bottom: 50px;
 }
 
 .articles__wrapper {
@@ -198,9 +196,8 @@ tr:not(:first-of-type) {
 	padding: 11px 0 6px 0;
 }
 
-
 td:not(.style-center td) {
-	padding: 9px 12px 9px 11px;
+	padding: 10px 12px 10px 11px;
 }
 
 table td:first-of-type {

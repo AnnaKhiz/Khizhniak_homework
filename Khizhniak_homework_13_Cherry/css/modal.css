@@ -31,7 +31,7 @@
 .btn {
 	position:absolute;
 	bottom: 66%;
-	left: 69%;
+	right: 70%;
 	color: rgba(200, 193, 193, 0.127);
 	font-size: 1.8rem;
 	cursor: pointer;
