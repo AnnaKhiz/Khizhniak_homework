@@ -1,0 +1,38 @@
+.modal {
+	position: fixed;
+	top: 110%;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	background-color: rgba(72, 43, 49, 0.67);
+	transition: all ease-out 1s;
+}
+
+.modal__subscribe {
+	background-color: rgba(250, 191, 176, 0.921);
+	opacity: 0;
+	pointer-events: none;
+	padding: 10px;
+	position: absolute;
+	left: 30%;
+	top: 35%;
+	
+}
+
+.modal.show {
+	top: 0;
+}
+
+.modal.show .modal__subscribe {
+	opacity: 1;
+	pointer-events: initial;
+}
+
+.btn {
+	position:absolute;
+	bottom: 66%;
+	left: 69%;
+	color: rgba(200, 193, 193, 0.127);
+	font-size: 1.8rem;
+	cursor: pointer;
+

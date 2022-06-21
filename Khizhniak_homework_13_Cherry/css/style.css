@@ -1,0 +1,100 @@
+@import url('./style-null.css');
+@import url('./banner.css');
+@import url('./header.css');
+@import url('./aside.css');
+@import url('./main.css');
+@import url('./footer.css');
+@import url('./modal.css');
+
+
+.container {
+	max-width: 982px;
+	margin: 0 auto;
+}
+
+.red-letter::first-letter {
+	color: #ae4b5d;
+	
+}
+
+.clearfix::after {
+	content: "";
+	clear: both;
+	display: table;
+}
+
+.pd-lr {
+	padding: 0 8px;
+}
+
+span {
+	display: inline-block;
+}
+
+.style-none {
+	list-style: none;
+	
+}
+
+.marg-lef {
+	margin-left: 29px;
+}
+
+.red-marker li::marker {
+	color: #9c4757;
+}
+
+.red-mail {
+	color: #d08b98;
+	text-decoration: underline;
+}
+
+.li-marg {
+	margin-left: 20px;
+}
+
+.margin-title {
+	margin-left: 3px;
+}
+
+.mg-l-ordered {
+	margin-left: 15px;
+	margin-right: -3px;
+}
+
+.mg-l{
+	margin-left: 23px;
+}
+
+.list-backg {
+	background-color: #dedede;
+}
+
+.fot-mr-r-1 {
+	margin-right: 82px;
+}
+
+.fot-mr-r-1 li {
+	margin-bottom: 9px;
+}
+
+.fot-mr-r-2 {
+	margin-right: 79px;
+}
+
+.fot-mr-r-2 li {
+	margin-bottom: 10px;
+}
+
+.fot-mr-r-3 li {
+	margin-bottom: 10px;
+	margin-left: 4px;
+}
+
+.list-1 {
+	margin-right: -3px;
+}
+
+.list-2 {
+	margin-right: -17px;
+}
