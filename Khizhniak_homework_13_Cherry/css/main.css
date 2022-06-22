@@ -2,21 +2,20 @@ article {
 	float: left;
 	max-width: 746px;
 	padding-left: 27px;
-	width: 100%;	
-
+	width: 100%;
 }
 
 .main__article {
 	margin-top: 17px;
-
 }
 .main__article-label {
 	font: 700 1.5rem "Arial";
 	color: #5c646e;
-	margin-bottom: 15px;
-	height: 22px;
+	margin-bottom: 9px;
+	width: 100%;
 	overflow: hidden;
 }
+
 .main__article-text {
 	font: 400 0.875rem "Arial";
 	color: #5c646e;
@@ -25,6 +24,7 @@ article {
 	height: 80px;
 	overflow: hidden;
 }
+
 .red-style {
 	color: #95161f;
 	text-decoration: underline;
@@ -36,23 +36,21 @@ article {
 	margin-bottom: 16px;
 	padding-left: 28px;
 	float:left;
-	
-	
 }
+
 .main__video-item {
 	float:left;
 	max-width: 30%;
 	width: 100%;
 	margin-right: 18px;
-	
 }
+
 .main__video-label {
 	color: #282d33;
 	font: 700 1.125rem "Arial";
 	margin-bottom: 10px;
 	margin-left: -1px;
 }
-
 
 .main__video-item img {
 	margin-left: -6px;
@@ -71,20 +69,18 @@ article {
 	margin-bottom: 24px;
 	padding-left: 26px;
 }
+
 .main__articles-label {
-	
 	color: #a5adb8;
 	font: 700 1.5rem "Arial";
 	margin-bottom: 14px;
-	
-
 }
+
 .main__articles-list {
 	display: inline-block;
 	width: 33.333%;
 	vertical-align: top;
 }
-
 
 .main__articles-list:last-of-type {
 	margin-right: 0;
@@ -97,14 +93,15 @@ article {
 	margin-bottom: 2px;
 }
 
-
 .main__articles-list-item {
 	color: #6b6f74;
 	font: 400 0.875rem "Arial";
 }
+
 .main__articles-list-item li {
 	line-height: 23px;
 }
+
 .main__articles-list-item ul {
 	list-style: inside;
 }
@@ -125,17 +122,12 @@ main {
 	padding-bottom: 57px;
 }
 
-.articles__wrapper {
-	max-width: 900px;
-	width: 100%;
-}
 
 /*--------table-------------*/
 
 .table {
 	margin-left: 262px;
 	margin-right: 25px;
-	
 }
 
 table {
@@ -176,7 +168,6 @@ td {
 	margin-bottom: 16px;
 	font: 700 1.5rem "Arial";
 	color: #a5adb8;
-	
 }
 
 tr:first-of-type {
@@ -186,10 +177,8 @@ tr:first-of-type {
 }
 
 tr:not(:first-of-type) {
-	
 	background-color: #282d33;
 	color: #a5adb8;
-	
 }
 
 .style-center td {
@@ -203,6 +192,5 @@ td:not(.style-center td) {
 table td:first-of-type {
 	width: 46px;
 	text-align: center;
-	
 }
 

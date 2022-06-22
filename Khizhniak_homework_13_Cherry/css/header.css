@@ -1,12 +1,12 @@
 .header {
 	padding: 19px 19px 16px 19px;
 	background-color: #363e43;
-	
 }
 .header__logo {
 	display: block;
 	float: left;
 }
+
 .header__logo-title {
 	font: 700 1.875rem "Arial";
 	display: block;
@@ -30,10 +30,7 @@
 	color: #656f7a;
 }
 .header__search {
-	display: block;
 	float: right;
-	
-
 }
 
 .header__search form {
@@ -48,10 +45,7 @@
 	box-shadow: inset 5px 5px 5px 5px rgba(0, 0, 0, 25%);
 	margin-right: 6px;
 	margin-top: 4px;
-	padding-left: 9px;
-	padding-right: 9px;
-	padding-top: 9px;
-	padding-bottom: 9px;
+	padding: 8px 9px 9px 9px;
 	font: 400 0.875rem "Arial";
 	border-radius: 5px;
 	max-width: 198px;
@@ -65,7 +59,6 @@
 
 .header__search-input::placeholder {
 	color: #5b636e;
-	
 }
 .fa-solid {
 	color: #fefdfd;
@@ -102,12 +95,10 @@
 	list-style: none;
 	font: 700 1rem "Arial";
 	float: left;
-	
 }
 
 .menu__list-item:hover {
 	background-color: #ffffff;
-	
 }
 
 .menu__list-item a:hover{
@@ -120,9 +111,7 @@
 	padding: 3px 0 6px 24px;
 	background-color: #f3f3f3;
 }
-.breadcrumbs__list {
 
-}
 .breadcrumbs__list-item a {
 	color:  #95161f;	
 }
@@ -133,10 +122,8 @@
 	color: #000000;
 }
 
-
 .breadcrumbs__list-item {
 	font: 400 0.6875rem "Arial";
 	display: inline-block;
-	
 	color: #6b6f74;
 }

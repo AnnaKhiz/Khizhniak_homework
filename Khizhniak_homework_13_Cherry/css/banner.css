@@ -1,6 +1,4 @@
-.banner {
-	
-}
+
 .banner__wrapper{
 	position: relative;
 }
@@ -12,29 +10,27 @@
 	left: 39px;
 	top: 39px;
 	max-width: 483px;
-
 }
+
 .banner__info-label {
 	color: #a5adb8;
 	font: 700 1.875rem "Arial";
-	margin-bottom: 2px;
-	height: 30px;
+	margin-bottom: -1px;
 	overflow: hidden;
 }
 .banner__info-desc {
 	color: #282d33;
 	font: 700 1.125rem "Arial";
-	margin-bottom: 17px;
-	height: 18px;
+	margin-bottom: 13px;
 	overflow: hidden;
 }
 .banner__info-label2 {
 	font: 700 1.125rem "Arial";
 	color: #a5adb8;
 	margin-bottom: 5px;
-	height: 20px;
 	overflow: hidden;
 }
+
 .banner__info-text {
 	width: auto;
 	color: #d9dcdf;

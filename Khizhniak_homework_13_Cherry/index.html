@@ -8,7 +8,7 @@
 	<link rel="stylesheet" href="./css/style.css">
 	<script src="https://kit.fontawesome.com/bdd2ca727e.js" crossorigin="anonymous"></script>
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"
-	integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+		integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 	<title>Cherry</title>
 </head>
 
@@ -85,10 +85,10 @@
 				<div class="aside-form">
 					<h3 class="aside-form__label">Contact Us</h3>
 					<form action="#" method="get">
-						<input type="text" placeholder="Your Name">
-						<input type="text" placeholder="Daytime Number">
-						<input type="email" placeholder="Email Address">
-						<input type="text" placeholder="City">
+						<input type="text" placeholder="Your Name" name="name">
+						<input type="text" placeholder="Daytime Number" onfocus="(this.type='date')" name="date">
+						<input type="email" placeholder="Email Address" name="email">
+						<input type="text" placeholder="City" name="city">
 						<div class="select__wrapper">
 							<select name="problem" id="form-problem">
 								<option value="problem" selected>Problem With</option>
@@ -123,15 +123,7 @@
 					</p>
 					<a href="#" class="aside-article__link">More about</a>
 				</div>
-
-
-
-
 			</aside>
-
-
-
-
 
 			<article class="main__article">
 				<h2 class="main__article-label red-letter">What We Do…</h2>
@@ -147,7 +139,6 @@
 				</p>
 			</article>
 
-
 			<section class="main__video">
 				<div class="main__video-item">
 					<h3 class="main__video-label">Admin panel</h3>
@@ -161,22 +152,17 @@
 
 				<div class="main__video-item">
 					<h3 class="main__video-label">Videos</h3>
-
 					<div class="feedback-btn" id="callModal">
 						<a href="#">
 							<img src="./img/pic3.png" alt="picture block image">
 						</a>
 					</div>
-
 				</div>
 			</section>
 
 			<article class="main__articles">
-
 				<h2 class="main__articles-label red-letter">Lists</h2>
-
 				<div class="main__articles-list list-1">
-
 					<h3 class="main__articles-list-label">List style type circle <span
 							class="list-backg">&#8249ul&#8250</span></h3>
 					<ul class="main__articles-list-item mg-l first-list">
@@ -196,7 +182,6 @@
 				</div>
 
 				<div class="main__articles-list list-2">
-
 					<h3 class="main__articles-list-label">
 						Unstyled <span class="list-backg">&#8249ul classs="unstyled"&#8250</span>
 					</h3>
@@ -217,7 +202,6 @@
 				</div>
 
 				<div class="main__articles-list">
-
 					<h3 class="main__articles-list-label ">
 						Ordered <span class="list-backg">&#8249ol&#8250</span>
 					</h3>
@@ -301,20 +285,9 @@
 			</section>
 		</div>
 
-
-
-
-
-		</div>
-
-
-
-
-
 	</main>
 
 	<footer class="footer">
-
 		<div class="footer__red-line"></div>
 		<div class="container">
 			<div class="footer__container">
@@ -361,10 +334,7 @@
 						</ul>
 					</nav>
 				</div>
-
-
 			</div>
-
 		</div>
 	</footer>
 
@@ -372,12 +342,11 @@
 	<div class="modal" id="modal">
 		<div class="modal__subscribe">
 			<iframe width="560" height="315" src="https://www.youtube.com/embed/C5q0ULg0nmY" title="YouTube video player"
-				frameborder="0" allow="accelerometer; autoplay; clipboard-write; 
+				allow="accelerometer; autoplay; clipboard-write; 
 			encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 		</div>
 		<i class="fa-solid fa-circle-xmark btn" id="close"></i>
 	</div>
-	
 
 	<script src="./js/script.js"></script>
 </body>
