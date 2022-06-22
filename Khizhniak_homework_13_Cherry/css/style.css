@@ -6,12 +6,24 @@
 @import url('./footer.css');
 @import url('./modal.css');
 
-
+body {
+	background-color: #e6e6e5;
+}
 .container {
+	background-color: #ffffff;
 	max-width: 982px;
 	margin: 0 auto;
 }
 
+.container-f {
+	
+	max-width: 982px;
+	margin: 0 auto;
+}
+
+.cont_bkg {
+	
+}
 .red-letter::first-letter {
 	color: #ae4b5d;
 	

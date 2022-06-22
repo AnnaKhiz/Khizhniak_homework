@@ -19,10 +19,12 @@
 
 .header__logo-title:hover {
 	color: #ae4b5d;
+	transition: all ease-in-out 0.4s;
 }
 
 .header__logo-title:hover::first-letter {
 	color: #a5adb8;
+	transition: all ease-in-out 0.4s;
 }
 
 .header__logo-desc {
@@ -55,6 +57,7 @@
 .header__search-input:focus {
 	border: 1px solid #000000;
 	box-shadow: inset 2px 2px 5px rgba(139, 139, 139, 0.25), 2px 2px 5px rgba(139, 139, 139, 0.25) inset;
+	transition: all ease-in-out 0.4s;
 }
 
 .header__search-input::placeholder {
@@ -66,6 +69,7 @@
 
 .header__search-btn:hover {
 	background-color: #c35e70;
+	transition: all ease-in-out 0.4s;
 }
 
 .header__search-btn {
@@ -99,10 +103,12 @@
 
 .menu__list-item:hover {
 	background-color: #ffffff;
+	transition: all ease-in-out 0.4s;
 }
 
 .menu__list-item a:hover{
 	color: #95161f;
+	transition: all ease-in-out 0.4s;
 }
 
 /*---------breadcrumbs-----------*/
@@ -120,6 +126,7 @@
 }
 .breadcrumbs__list-item a:hover{
 	color: #000000;
+	transition: all ease-in-out 0.4s;
 }
 
 .breadcrumbs__list-item {

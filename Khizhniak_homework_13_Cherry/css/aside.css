@@ -50,6 +50,7 @@
 
 .aside-form input:focus {
 	box-shadow: inset 2px 2px 5px rgba(81, 81, 81, 0.25), 2px 2px 5px rgba(81, 81, 81, 0.25) inset;
+	transition: all ease-in-out 0.4s;
 }
 
 .aside-form select {
@@ -63,6 +64,11 @@
 	margin-bottom: 13px;
 }
 
+.aside-form select:focus {
+	border-radius: 0px;
+	transition: all ease-in 0.3s;
+}
+
 #form-problem {
 	padding: 7px 0 7px 7px;
 }
@@ -74,6 +80,7 @@
 
 .aside-form select:hover {
 	box-shadow: inset 2px 2px 5px rgba(81, 81, 81, 0.25), 2px 2px 5px rgba(81, 81, 81, 0.25) inset;
+	transition: all ease-in-out 0.4s;
 }
 
 .select__wrapper{
@@ -124,6 +131,7 @@
 	background: -webkit-linear-gradient(180deg, rgba(149,22,31,1) 0%, rgba(176,37,46,0.6477941518404237) 100%);
 	background: linear-gradient(180deg, rgba(149,22,31,1) 0%, rgba(176,37,46,0.6477941518404237) 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#95161f",endColorstr="#b0252e",GradientType=1);
+	transition: all ease-in-out 0.4s;
 }
 
 /*---------aside article -------*/
