@@ -206,11 +206,10 @@ font-size: 15px;
 
 
 @media screen and (max-width: 768px) {
-
 .wrapper {
 	max-width: 600px;
 	padding: 0 20px;
-	margin: 0;
+	margin-left: 50px;
 }
 .header__banner-label,
 .header__banner-desc,
@@ -323,6 +322,12 @@ p.main__tickets-contacts-desc,
 .footer__category {
 	text-align: center;
 }
+a.button {
+	font-size: 1rem;
+}
+.main__cards-btn {
+	padding: 12px 70px 12px 70px;
+}
 }
 
 
@@ -335,13 +340,7 @@ p.main__tickets-contacts-desc,
 	padding: 0 20px;
 }
 
-a.button {
-	font-size: 1.1rem;
-}
-.main__cards-btn {
-	padding: 12px 70px 12px 70px;
-	
-}
+
 .main__tickets-bonus-logo img,
 .main__tickets-contacts-logo img {
 	display:none;
@@ -458,4 +457,6 @@ html, body {
 	background-image: url('../img/background.png');
 	background-position: -1000px;
 }
+
+
 }
