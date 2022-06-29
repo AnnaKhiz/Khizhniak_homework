@@ -1,0 +1,268 @@
+/*------main section banner-------*/
+
+.main {
+}
+.container-main {
+}
+.banner {
+	display: flex;
+	padding-top: 129px;
+	padding-bottom: 172px;
+	
+}
+.banner__info {
+	
+	
+}
+.banner__info-label {
+	width: 552px;
+	
+
+	font-size: 4.0625rem;
+	line-height: 70px;
+	color: #000000;
+	margin-bottom: 51px;
+}
+.banner__info-desc {
+	font-size: 1.5625rem;
+	line-height: 30px;
+	color: #000000;
+	margin-bottom: 50px;
+	width: 471px;
+}
+.banner__info-btn-block {
+	display: flex;
+	column-gap: 10px;
+	align-items: center;
+	margin-bottom: 25px;
+}
+.banner__info-btn-white {
+	line-height: 60px;
+	color: #000000;
+	background-color: #E5E5E5;
+	padding: 0 29px;
+	border: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+.banner__info-btn-orange {
+	line-height: 60px;
+	color: #FFFFFF;
+	background-color: #FF6336;
+	padding: 0 41px 0 42px;
+
+}
+.banner__info-text {
+	font-size: 0.9375rem;
+	line-height: 25px;
+	color: #000000;
+}
+.banner__picture img {
+	position: absolute;
+	width: 759px;
+	left: -28px;
+	top: 22px;
+}
+
+.banner__picture {
+	position: relative;
+	padding-top: 22px;
+	
+}
+
+
+
+/*-----------section logo --------*/
+
+.logo {
+	background-color: #FF9C7D;
+	padding: 108px 0 105px 0;
+}
+
+.logo__flex {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.logo__label {
+	max-width: 720px;
+	width: 100%;
+	font-size: 50px;
+	line-height: 60px;
+	text-align: center;
+	color: #000000;
+	margin: 0 auto 82px auto;
+}
+
+
+/*------------section benefits---------------*/
+
+.benefits {
+	padding-top: 90px;
+}
+.benefits__block {
+	display: flex;
+	padding-bottom: 250px;
+	justify-content: space-between;
+}
+
+.benefits__block:last-of-type {
+	padding-bottom: 150px;
+}
+.benefits__info {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	row-gap: 30px;
+}
+.benefits__info-label {
+	font-size: 50px;
+	line-height: 60px;
+	color: #000000;
+	max-width: 494px;
+	overflow: hidden;
+}
+.benefits__info-desc {
+	font-size: 20px;
+	line-height: 30px;
+	color: #000000;
+	overflow: hidden;
+}
+
+.desc-w-h {
+	max-width: 491px;
+	max-height: 120px;
+}
+
+.desc-h {
+	max-width: 525px;
+	max-height: 150px;
+}
+
+.desc-wid {
+	max-width: 450px;
+	max-height: 150px;
+}
+
+.desc-h-2 {
+	max-width: 520px;
+	max-height: 120px;
+}
+
+.mar-r {
+	margin-right: 70px;
+}
+
+.underline {
+	text-decoration: underline;
+}
+.benefits__info-link {
+	font-size: 1.25rem;
+	line-height: 30px;
+	color: #000000;
+}
+.benefits__img {
+}
+
+/*-----------section localize----------*/
+
+.localize {
+	background-color: #FFF8E4;
+	padding: 120px 0 147px 0;
+}
+
+.localize__label {
+	font-size: 3.125rem;
+	line-height: 60px;
+	color: #000000;
+	text-align: center;
+	margin-bottom: 79px;
+	overflow: hidden;
+}
+.localize__flex-container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	row-gap: 75px;
+}
+.localize__flex-item {
+	text-align: center;
+	flex: 0 1 calc((100% - 10%) / 3);
+}
+.localize__flex-img {
+}
+.localize__flex-label {
+	font-size: 1.5625rem;
+	line-height: 35px;
+	text-align: center;
+	color: #000000;
+	overflow: hidden;
+}
+.localize__flex-desc {
+	font-size: 1.125rem;
+	line-height: 25px;
+	text-align: center;
+	color: #000000;
+	overflow: hidden;
+}
+
+/*-----------section productivity ---------------*/
+
+
+.productivity {
+	padding: 154px 0 187px 0;
+}
+.productivity__flex-container {
+	display: flex;
+	justify-content: space-between;
+	column-gap: 31px;
+	
+}
+.productivity__label {
+	font-size: 3.125rem;
+	line-height: 60px;
+	color: #000000;
+	overflow: hidden;
+	margin-bottom: 75px;
+	text-align: center;
+}
+.productivity__item {
+	flex: 1 1 calc((100% - 31px) / 3);
+	text-align: left;
+	
+}
+.productivity__item-img {
+	height: 205px;
+	margin-bottom: 49px;
+}
+
+.vert-al {
+	display: inline-block;
+	height: 100%;
+	vertical-align: middle;
+	
+}
+.productivity__item-img img {
+	
+	
+}
+.productivity__item-label {
+	font-size: 1.875rem;
+	line-height: 40px;
+	color: #000000;
+	margin-bottom: 34px;
+	overflow: hidden;
+}
+.productivity__item-desc {
+	font-size: 1.25rem;
+	line-height: 30px;
+	color: #000000;
+	margin-bottom: 25px;
+	max-height: 180px;
+	height: 100%;
+	overflow: hidden;
+}
+.productivity__item-link {
+
+}
+

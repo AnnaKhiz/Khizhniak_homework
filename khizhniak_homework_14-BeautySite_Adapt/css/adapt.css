@@ -75,9 +75,7 @@
 .main__img-item {
 	flex: 1 1 calc((100% - 20%) / 4);
 }
-.footer__category-item {
-	margin-right: 24px;
-}
+
 .footer__category-item {
 	flex: 1 1 calc((100% - 20%) / 4);
 }
@@ -185,11 +183,9 @@ font-size: 15px;
 	display:none;
 }
 .main__img-item img {
-	padding: 36px 69px 34px 20px;
+	padding: 36px 49px 34px 49px;
 }
-.footer__category-item {
-	margin-right: 20px;
-}
+
 .main__tickets-bonus {
 	flex: 1 1 calc((80% - 20%) / 2);
 }
@@ -199,6 +195,10 @@ font-size: 15px;
 .footer__category-item {
 	flex: 1 1 calc((100% - 20%) / 4);
 }
+.main__tickets-contacts-btn {
+	padding: 11px 26px 8px 26px;
+}
+
 }
 
 
@@ -320,6 +320,7 @@ p.main__tickets-contacts-desc,
 	margin-right: 0px;
 }
 .footer__category {
+	
 	text-align: center;
 }
 a.button {
@@ -327,6 +328,9 @@ a.button {
 }
 .main__cards-btn {
 	padding: 12px 70px 12px 70px;
+}
+input::placeholder {
+	padding: 9px 80px 9px 70px;
 }
 }
 
@@ -377,8 +381,8 @@ p.header__contacts-item {
 	text-align: center;
 	justify-content: center;
 	flex-wrap: wrap;
-	column-gap: 0;
-	row-gap: 10px;
+	column-gap: 10px;
+	
 }
 p.footer__category-label {
 	text-align: center;
@@ -393,18 +397,42 @@ p.footer__category-label {
 	padding-top: 20px;
 }
 .header__banner {
-	padding-top: 200px;
+	position: relative;
+	padding-top: 300px;
 	padding-bottom: 250px;
 	background-image: url('../img/background.png');
 	background-position: -950px;
 }
-.header__banner-label,
+.header__banner:before {
+	position: absolute;
+	content: '';
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	z-index: 0;
+	background-color: black;
+	opacity: 0.2;
+}
+
+.header__banner-label {
+	position: absolute;
+	z-index: 1;
+	top: 15%;
+	left: 3%;
+}
 .header__banner-desc {
-	display: none;
+	position: absolute;
+	z-index: 1;
+	top: 43%;
+	left: 3%;
 }
 .header__banner-btn {
-	margin: 0 auto;
-	opacity: 0.3;
+	position: absolute;
+	z-index: 1;
+	top: 65%;
+	left: 3%;
+	
 }
 .header__banner-btn:hover {
 	opacity: 1;
@@ -439,6 +467,12 @@ html, body {
 	padding: 36px 60px 34px 60px;
 	margin: 0 5%;
 }
+input::placeholder {
+	padding: 9px 60px 9px 50px;
+}
+.main__section-look {
+	padding-bottom: 50px;
+}
 }
 
 
@@ -452,11 +486,13 @@ html, body {
 	display: none;
 }
 .header__banner {
-	padding-top: 200px;
+	padding-top: 300px;
 	padding-bottom: 250px;
 	background-image: url('../img/background.png');
 	background-position: -1000px;
 }
-
+input::placeholder {
+	padding: 9px 30px 9px 30px;
+}
 
 }

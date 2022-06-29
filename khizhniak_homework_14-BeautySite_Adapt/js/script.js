@@ -3,12 +3,14 @@ $(document).ready(function () {
 	$("#callBurger").on('click', function () {
 		$('#burger').toggleClass('show');
 		$('body').toggleClass('fixed');
+		$('.burger__container').toggleClass('scroll');
 		event.preventDefault();
 	});
 
 	$("#close").on('click', function () {
 		$('#burger').toggleClass('show');
 		$('body').toggleClass('fixed');
+		$('.burger__container').toggleClass('scroll');
 		event.preventDefault();
 	});
 

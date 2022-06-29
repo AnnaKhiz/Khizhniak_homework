@@ -20,7 +20,7 @@
 	right: 0;
 }
 .burger__container {
-	
+	max-height: 80vh;
 	max-width: calc(100% - 5%);
 	width: 100%;
 	opacity: 0;

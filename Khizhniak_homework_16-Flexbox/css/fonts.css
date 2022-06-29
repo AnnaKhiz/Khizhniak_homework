@@ -1,13 +1,13 @@
 @font-face {
-	font-family: 'GraphikLCG-Regular';
-	src: url('../fonts/GraphikLCG-Regular.ttf') format('ttf');
+	font-family: 'Graphik LC TT';
+	src: url('../fonts/GraphikLCG-Regular.ttf');
 	font-weight: 400;
 	font-style: normal;
 }
 
 @font-face {
-	font-family: 'GraphikLCG-Semibold';
-	src: url('../fonts/GraphikLCG-Semibold.ttf') format('ttf');
+	font-family: 'Graphik LC TT';
+	src: url('../fonts/GraphikLCG-Semibold.ttf');
 	font-weight: 600;
 	font-style: normal;
 }

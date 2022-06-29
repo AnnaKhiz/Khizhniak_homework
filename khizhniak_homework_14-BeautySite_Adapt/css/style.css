@@ -96,3 +96,8 @@
 	overflow:hidden;
 	width:100%; 
 	}
+
+	.scroll {
+		overflow: auto;
+		 
+		}
