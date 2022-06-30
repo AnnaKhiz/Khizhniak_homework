@@ -1,9 +1,14 @@
 @import url('../css/fonts.css');
-@import url('https://fonts.googleapis.com/css2?family=Blaka&family=Cormorant+Garamond:wght@500&family=Lobster&family=Oswald&family=Roboto&display=swap');
 @import url('../css/style-null.css');
 @import url('../css/header.css');
 @import url('../css/main.css');
 @import url('../css/footer.css');
+
+/*
+* {
+	border: 1px solid black;
+}
+*/
 
 .container {
 	max-width: 1368px;
@@ -29,11 +34,17 @@
 	margin: 0 auto;
 }
 
+.container-little {
+	max-width: 1060px;
+	padding: 0 15px;
+	margin: 0 auto;
+	
+}
+
 .button {
 	font-family: 'Graphik LC TT';
 	font-style: normal;
 	font-weight: 600;
-	font-size: 1rem;
 	text-align: center;
 }
 
@@ -49,3 +60,68 @@
 	font-weight: 600;
 }
 
+.underline {
+	text-decoration: underline;
+	color: #000000;
+}
+
+.desc-w-h {
+	max-width: 491px;
+	max-height: 120px;
+}
+
+.desc-h {
+	max-width: 525px;
+	max-height: 150px;
+}
+
+.desc-wid {
+	max-width: 450px;
+	max-height: 150px;
+}
+
+.desc-h-2 {
+	max-width: 520px;
+	max-height: 120px;
+}
+
+.mar-r {
+	margin-right: 70px;
+}
+
+.vert-al {
+	display: inline-block;
+	height: 100%;
+	vertical-align: middle;
+}
+
+.pad-t {
+	padding-top: 10px;
+}
+
+.marg {
+	column-gap: 67px;
+}
+
+.btn-white {
+	background-color: #FFFFFF;
+	border: 1px solid rgba(0, 0, 0, 0.5);
+	color: #000000;
+}
+.btn-orange {
+	color: #FFFFFF;
+	background-color: #FF6336;
+	border:  1px solid #ffffff;
+}
+
+.mar-115 {
+	margin-right: 113px;
+}
+
+.mar-51 {
+	margin-right: 51px;
+}
+
+.mar-62 {
+	margin-right: 62px;
+}
