@@ -4,11 +4,20 @@
 @import url('../css/main.css');
 @import url('../css/footer.css');
 
-/*
-* {
-	border: 1px solid black;
+::-webkit-scrollbar {
+	width: 15px;
+	background-color: #ffffff;
 }
-*/
+
+::-webkit-scrollbar-thumb {
+	background-color: #FF6336;
+	border-radius: 10px;
+	box-shadow: inset 1px 1px 10px #ebe2df;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	box-shadow: inset 1px 1px 10px #0a0300;
+}
 
 .container {
 	max-width: 1368px;
@@ -94,15 +103,12 @@
 	height: 100%;
 	vertical-align: middle;
 }
-
 .pad-t {
 	padding-top: 10px;
 }
-
 .marg {
 	column-gap: 67px;
 }
-
 .btn-white {
 	background-color: #FFFFFF;
 	border: 1px solid rgba(0, 0, 0, 0.5);
