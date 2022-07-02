@@ -3,6 +3,8 @@
 @import url('../css/header.css');
 @import url('../css/main.css');
 @import url('../css/footer.css');
+@import url('../css/adapt.css');
+@import url('../css/burger-menu.css');
 
 ::-webkit-scrollbar {
 	width: 15px;
@@ -18,6 +20,8 @@
 ::-webkit-scrollbar-thumb:hover {
 	box-shadow: inset 1px 1px 10px #0a0300;
 }
+
+
 
 .container {
 	max-width: 1368px;
@@ -130,4 +134,21 @@
 
 .mar-62 {
 	margin-right: 62px;
+}
+
+.fixed {
+	overflow:hidden;
+	width:100%; 
+}
+
+.scroll {
+	overflow: auto;	 
+}
+
+.for-768 {
+	display: none;
+}
+
+.hid {
+	display: none;
 }

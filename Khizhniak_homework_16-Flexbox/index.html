@@ -6,13 +6,14 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="./css/index.css">
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+		integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 	<title>Homework 16. Flexbox.</title>
 </head>
 
 <body>
 	<div class="container">
 		<header class="header">
-
 			<div class="header__item-left">
 				<a href="#" class="header__item-logo">
 					<img src="./img/logo.png" alt="">
@@ -32,6 +33,29 @@
 			<div class="header__item-right">
 				<a href="#" class="header__item-login-btn button btn-white">Log in</a>
 				<a href="#" class="header__item-tryit-btn button btn-orange">Try it free</a>
+			</div>
+
+			<div id="callBurger" class="burger-btn">
+				<input id="menu__toggle" type="checkbox">
+				<label class="menu__btn" for="menu__toggle">
+					<span></span>
+				</label>
+			</div>
+
+			<div id="burger" class="burger">
+				<div class="burger__container">
+					<ul>
+						<li><a href="#">Product</a></li>
+						<li><a href="#">Features</a></li>
+						<li><a href="#">Pricing</a></li>
+						<li><a href="#">Case studies</a></li>
+						<li><a href="#">Resources</a></li>
+					</ul>
+					<div class="hid for-768 burger-buttons">
+						<a href="#">Log in</a>
+						<a href="#">Try it free</a>
+					</div>
+				</div>
 			</div>
 
 		</header>
@@ -140,7 +164,7 @@
 
 				</div>
 
-				<div class="benefits__block">
+				<div class="benefits__block hidden">
 
 					<div class="benefits__img">
 						<img src="./img/icons.png" alt="image icons">
@@ -160,8 +184,28 @@
 						</p>
 						<a href="#" class="benefits__info-link text-bold">Start now</a>
 					</div>
+				</div>
 
+				<div class="benefits__block for-768">
 
+					<div class="benefits__info">
+						<h3 class="benefits__info-label text-bold">
+							Shorten time<br> to market
+						</h3>
+						<p class="benefits__info-desc text desc-wid mar-r">
+							Localize your product in parallel with the development cycle.
+							Use the <a href="#" class="underline">Adobe XD</a>,
+							<a href="#" class="underline">Figma</a>, and
+							<a href="#" class="underline">Sketch</a> plugins to start working on
+							translations as soon as the product design is ready. No more idle
+							waiting.
+						</p>
+						<a href="#" class="benefits__info-link text-bold">Start now</a>
+					</div>
+
+					<div class="benefits__img">
+						<img src="./img/icons.png" alt="image icons">
+					</div>
 
 				</div>
 
@@ -174,7 +218,8 @@
 						<p class="benefits__info-desc text desc-h">
 							Use built-in tools — e.g. <a href="#" class="underline">translation memory</a>,
 							machine translation,
-							and <a href="#" class="underline">QA checks</a> — to enhance the quality and cohesion of translations.
+							and <a href="#" class="underline">QA checks</a> — to enhance the quality and cohesion of
+							translations.
 							Add product <a href="#" class="underline">screenshots</a> for context and use the
 							<a href="#" class="underline">in-context editors</a>
 							for instant previews.
@@ -188,7 +233,7 @@
 
 				</div>
 
-				<div class="benefits__block">
+				<div class="benefits__block hidden">
 
 					<div class="benefits__img">
 						<img src="./img/code.png" alt="image code">
@@ -210,8 +255,32 @@
 						</p>
 						<a href="#" class="benefits__info-link text-bold">Start now</a>
 					</div>
+				</div>
 
 
+
+				<div class="benefits__block for-768">
+
+					<div class="benefits__info">
+						<h3 class="benefits__info-label text-bold">
+							Less work for developers
+						</h3>
+						<p class="benefits__info-desc text desc-h-2">
+							Eliminate the hassle of localization and let developers get back to their
+							main tasks. Save hours with the powerful
+							<a href="#" class="underline">API</a>,
+							<a href="#" class="underline">CLI</a>,
+							<a href="#" class="underline">mobile SDKs</a>, and integrations
+							with <a href="#" class="underline">GitHub</a>,
+							<a href="#" class="underline">Bitbucket</a>,
+							<a href="#" class="underline">JIRA</a>, and more.
+						</p>
+						<a href="#" class="benefits__info-link text-bold">Start now</a>
+					</div>
+
+					<div class="benefits__img">
+						<img src="./img/code.png" alt="image code">
+					</div>
 
 				</div>
 
@@ -423,7 +492,7 @@
 					</div>
 
 				</div>
-			
+
 
 			</div>
 		</section>
@@ -556,7 +625,7 @@
 
 					</div>
 				</div>
-				</div>
+			</div>
 		</section>
 
 		<section class="footer__info">
@@ -591,7 +660,7 @@
 
 
 
-
+	<script src="./js/script.js"></script>
 </body>
 
 </html>
