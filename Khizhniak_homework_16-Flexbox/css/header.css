@@ -23,9 +23,9 @@
 	font-size: 0.9375rem;
 	line-height: 20px;
 	color: #000000;
+	transition: all ease-in-out 0.3s;
 }
 .header__navigation a:hover {
-	transition: all ease-in-out 0.3s;
 	color: #FF6336;
 }
 
@@ -39,10 +39,10 @@
 	line-height: 45px;
 	padding: 0 36px;
 	font-size: 1rem;
+	transition: all ease-in-out 0.3s;
 }
 
 .header__item-login-btn:hover {
-	transition: all ease-in-out 0.3s;
 	background-color: #FF6336;
 	color: #ffffff;
 	border:  1px solid #ffffff;
@@ -52,10 +52,10 @@
 	line-height: 45px;
 	padding: 0 21px 0 22px;
 	font-size: 1rem;
+	transition: all ease-in-out 0.3s;
 }
 
 .header__item-tryit-btn:hover {
-	transition: all ease-in-out 0.3s;
 	color: #000000;
 	background-color: #FFFFFF;
 	border: 1px solid rgba(0, 0, 0, 0.5);

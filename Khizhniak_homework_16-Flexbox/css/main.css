@@ -29,6 +29,7 @@
 	font-size: 1rem;
 	line-height: 60px;
 	padding: 0 29px;
+	transition: all ease-in-out 0.3s;
 }
 .banner__info-btn-white:hover {
 	border:  1px solid #ffffff;
@@ -39,6 +40,7 @@
 	font-size: 1rem;
 	line-height: 60px;
 	padding: 0 41px 0 42px;
+	transition: all ease-in-out 0.3s;
 }
 
 .banner__info-btn-orange:hover {
@@ -125,10 +127,10 @@
 	font-size: 1.25rem;
 	line-height: 30px;
 	color: #000000;
+	transition: all ease-in-out 0.3s;
 }
 
 .benefits__info-link:hover {
-	transition: all ease-in-out 0.3s;
 	color: #FF6336;
 }
 
@@ -223,10 +225,10 @@
 	font-size: 1.25rem;
 	line-height: 30px;
 	color: #000000;
+	transition: all ease-in-out 0.3s;
 }
 
 .productivity__item-link:hover {
-	transition: all ease-in-out 0.3s;
 	color: #FF6336;
 }
 
@@ -345,10 +347,10 @@
 	font-size: 1rem;
 	padding: 0 20px;
 	line-height: 60px;
+	transition: all ease-in-out 0.3s;
 }
 
 .integrate__btn:hover {
-	transition: all ease-in-out 0.3s;
 	color: #000000;
 	background-color: #FFFFFF;
 	border: 1px solid rgba(0, 0, 0, 0.5);
@@ -395,10 +397,10 @@
 	background-color: #000000;
 	padding: 0 40px;
 	color: #FFFFFF;
+	transition: all ease-in-out 0.3s;
 }
 
 .whywait__block-btn:hover {
-	transition: all ease-in-out 0.3s;
 	background-color: #ffffff;
 	color: #000000;
 }

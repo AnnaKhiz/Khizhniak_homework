@@ -67,6 +67,7 @@
 	font-size: 1.25rem;
 	line-height: 30px;
 	color: #000000;
+	transition: all ease-in-out 0.3s;
 }
 .footer__navigation-link:hover {
 	color: #FF6336;
@@ -87,6 +88,7 @@
 	font-weight: 400;
 	font-size: 0.9375rem;
 	color: #000000;
+	transition: all ease-in-out 0.3s;
 }
 
 
