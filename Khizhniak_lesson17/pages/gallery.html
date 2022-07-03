@@ -1,15 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="../css/index.css">
-	<title>Document</title>
+	<link rel="stylesheet" href="../css/gallery.css">
+	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+	<title>Gallery</title>
 </head>
+
 <body>
 	<div class="container">
 		<a href="../index.html">Back to main</a>
 	</div>
+	<div class="container-black">
+		<div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper mySwiper2">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide">
+					<img src="../img/12-chair.jpg" />
+				</div>
+				<div class="swiper-slide">
+					<img src="../img/deribasovskaya.jpg" />
+				</div>
+				<div class="swiper-slide">
+					<img src="../img/ekaterina.jpg" />
+				</div>
+				<div class="swiper-slide">
+					<img src="../img/odessa-hotel.jpg" />
+				</div>
+				<div class="swiper-slide">
+					<img src="../img/opera.jpg" />
+				</div>
+				<div class="swiper-slide">
+					<img src="../img/statue-of-duke.jpg" />
+				</div>
+
+			</div>
+
+			<div class="swiper-button-next"></div>
+			<div class="swiper-button-prev"></div>
+
+		</div>
+		<div thumbsSlider="" class="swiper mySwiper">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide">
+					<img src="../img/12-chair.jpg" />
+				</div>
+				<div class="swiper-slide">
+					<img src="../img/deribasovskaya.jpg" />
+				</div>
+				<div class="swiper-slide">
+					<img src="../img/ekaterina.jpg" />
+				</div>
+				<div class="swiper-slide">
+					<img src="../img/odessa-hotel.jpg" />
+				</div>
+				<div class="swiper-slide">
+					<img src="../img/opera.jpg" />
+				</div>
+				<div class="swiper-slide">
+					<img src="../img/statue-of-duke.jpg" />
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+	<script>
+		var swiper = new Swiper(".mySwiper", {
+			spaceBetween: 10,
+			slidesPerView: 4,
+			freeMode: true,
+			autoplay: true,
+			loop: true,
+			pauseOnHover: true,
+			watchSlidesProgress: true,
+		});
+		var swiper2 = new Swiper(".mySwiper2", {
+			spaceBetween: 10,
+			navigation: {
+				nextEl: ".swiper-button-next",
+				prevEl: ".swiper-button-prev",
+			},
+			thumbs: {
+				swiper: swiper,
+			},
+		});
+	</script>
+
+
+
 </body>
+
 </html>

@@ -6,13 +6,65 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="../css/index.css">
-	<title>Document</title>
+	<link rel="stylesheet" href="../owlCarousel/owl.carousel.min.css">
+	<link rel="stylesheet" href="../owlCarousel/owl.theme.default.min.css">
+	<title>Slider 3</title>
 </head>
 
 <body>
 	<div class="container">
 		<a href="../index.html">Back to main</a>
 	</div>
+
+	<div class="owl-carousel owl-theme">
+		<div class="item"><img src="../img/statue-of-duke.jpg" alt=""></div>
+		<div class="item"> <img src="../img/odessa-hotel.jpg" alt=""></div>
+		<div class="item"> <img src="../img/12-chair.jpg" alt=""></div>
+		<div class="item"><img src="../img/deribasovskaya.jpg" alt=""></div>
+		<div class="item"> <img src="../img/ekaterina.jpg" alt=""></div>
+		<div class="item"><img src="../img/opera.jpg" alt=""></div>
+
+	</div>
+
+
+
+	<script src="../owlCarousel/jquery.min.js"></script>
+	<script src="../owlCarousel/owl.carousel.min.js"></script>
+
+	<script>
+		$(document).ready(function () {
+			$(".owl-carousel").owlCarousel();
+		});
+	</script>
+
+	<script>
+		$('.owl-carousel').owlCarousel({
+			stagePadding: 20,
+			loop: true,
+			dotsEach: true,
+			lazyLoad: true,
+			autoplay: true,
+			autoplaySpeed: 500,
+			slideTransition: 'ease-in-out',
+			margin: 10,
+			nav: true,
+			responsive: {
+				0: {
+					items: 1
+				},
+				600: {
+					items: 2
+				},
+				1000: {
+					items: 3
+				}
+			}
+		})
+
+
+	</script>
+
+
 </body>
 
 </html>
