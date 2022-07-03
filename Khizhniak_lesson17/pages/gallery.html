@@ -7,7 +7,10 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="../css/gallery.css">
 	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-	<title>Gallery</title>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+	<script type="text/javascript"
+		src="https://cdn.rawgit.com/igorlino/elevatezoom-plus/1.1.6/src/jquery.ez-plus.js"></script>
+	<title>Gallery + Zoom</title>
 </head>
 
 <body>
@@ -16,30 +19,28 @@
 	</div>
 	<div class="container-black">
 		<div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper mySwiper2">
+
 			<div class="swiper-wrapper">
 				<div class="swiper-slide">
-					<img src="../img/12-chair.jpg" />
+					<img src="../img/12-chair.jpg" id="zoom_01" data-zoom-image="../img/12-chair-zoom.jpg" />
 				</div>
 				<div class="swiper-slide">
-					<img src="../img/deribasovskaya.jpg" />
+					<img src="../img/deribasovskaya.jpg" id="zoom_02" data-zoom-image="../img/deribasovskaya-zoom.jpg" />
 				</div>
 				<div class="swiper-slide">
-					<img src="../img/ekaterina.jpg" />
+					<img src="../img/ekaterina.jpg" id="zoom_03" data-zoom-image="../img/ekaterina-zoom.jpg" />
 				</div>
 				<div class="swiper-slide">
-					<img src="../img/odessa-hotel.jpg" />
+					<img src="../img/odessa-hotel.jpg" id="zoom_04" data-zoom-image="../img/odessa-hotel-zoom.jpg" />
 				</div>
 				<div class="swiper-slide">
-					<img src="../img/opera.jpg" />
+					<img src="../img/opera.jpg" id="zoom_05" data-zoom-image="../img/opera-zoom.jpg" />
 				</div>
 				<div class="swiper-slide">
-					<img src="../img/statue-of-duke.jpg" />
+					<img src="../img/statue-of-duke.jpg" id="zoom_06" data-zoom-image="../img/statue-of-duke-zoom.jpg" />
 				</div>
 
 			</div>
-
-			<div class="swiper-button-next"></div>
-			<div class="swiper-button-prev"></div>
 
 		</div>
 		<div thumbsSlider="" class="swiper mySwiper">
@@ -69,15 +70,16 @@
 	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
 	<script>
+
 		var swiper = new Swiper(".mySwiper", {
 			spaceBetween: 10,
 			slidesPerView: 4,
 			freeMode: true,
 			autoplay: true,
 			loop: true,
-			pauseOnHover: true,
 			watchSlidesProgress: true,
 		});
+
 		var swiper2 = new Swiper(".mySwiper2", {
 			spaceBetween: 10,
 			navigation: {
@@ -88,9 +90,28 @@
 				swiper: swiper,
 			},
 		});
+
+
+		$("#zoom_01").hover(function () {
+			$(this).ezPlus();
+		});
+		$("#zoom_02").hover(function () {
+			$(this).ezPlus();
+		});
+		$("#zoom_03").hover(function () {
+			$(this).ezPlus();
+		});
+		$("#zoom_04").hover(function () {
+			$(this).ezPlus();
+		});
+		$("#zoom_05").hover(function () {
+			$(this).ezPlus();
+		});
+		$("#zoom_06").hover(function () {
+			$(this).ezPlus();
+		});
+
 	</script>
-
-
 
 </body>
 
