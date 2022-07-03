@@ -1,0 +1,15 @@
+.image  {
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	
+}
+
+.image img {
+
+	width: 100%;
+}
+
+.marg {
+	margin-bottom: 20px;
+}

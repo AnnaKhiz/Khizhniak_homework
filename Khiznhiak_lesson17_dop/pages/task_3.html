@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="../css/index.css">
+	<title>Task 3</title>
+</head>
+
+<body>
+	<p>3. сделать поле ввод номера паспорта, где или вводится три буквы и семь цифр, или восемь цифр (я сделала другие
+		условия, по украинским паспортам)</p>
+	<p>4. при попытке отправки формы, в случае несовпадения с допустимым паттерном заполнения, должна выводиться ошибка.
+	</p>
+	<h3>Паспорт</h3>
+	<p>Паспорт старого образца - АА000000 (2 заглавные буквы, 6 цифр)</p>
+	<p>ID-карта - 000000000 (9 цифр)</p>
+	<form>
+		<input type="text" id="passport" placeholder="Введите номер паспорта" value="">
+		<div class="image">
+			<img src="../img/galochka.png" alt="" id="image">
+		</div><br><br>
+		<button id="button" onclick="sendData()">Отправить</button>
+	</form>
+
+	<script src="../js/task_3.js"></script>
+</body>
+
+</html>
