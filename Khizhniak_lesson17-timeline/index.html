@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+		integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+	<link href="./Dynamic-Animated-Timeline-Slider/Dynamic-Animated-Timeline-Slider/dist/jquery.roadmap.min.css"
+		rel="stylesheet">
+	<script src="./Dynamic-Animated-Timeline-Slider/Dynamic-Animated-Timeline-Slider/dist/jquery.roadmap.min.js"
+		type="text/javascript"></script>
+	<title>timeline</title>
+</head>
+
+<body>
+	<div id="my-timeline"></div>
+
+
+	<script>
+		var myEvents = [{
+			date: '2016',
+			content: 'Событие 1'
+		}, {
+			date: '2017',
+			content: 'Событие 2'
+		}, {
+			date: '2018',
+			content: 'Событие 3'
+		}, {
+			date: '2019',
+			content: 'Событие 4'
+		}, {
+			date: '2020',
+			content: 'Событие 4'
+		}, {
+			date: '2021',
+			content: 'Событие 5'
+		}
+		];
+		$('#my-timeline').roadmap(myEvents, {
+
+			onBuild: function () {
+				console.log('on build event');
+			},
+			prevArrow: '<i class="material-icons">keyboard_arrow_left</i>',
+			nextArrow: '<i class="material-icons">keyboard_arrow_right</i>',
+			eventTemplate: '<li class="timeline__events__event">' +
+				'<div class="event">' +
+				'<div class="event__date">####DATE###</div>' +
+				'<div class="event__content">####CONTENT###</div>' +
+				'</div>' +
+				'</li>',
+			orientation: 'auto',
+			rootClass: 'roadmap',
+
+		});
+
+		$('#my-timeline').roadmap(myEvents);
+
+	</script>
+</body>
+
+</html>
