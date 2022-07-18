@@ -9,13 +9,15 @@
 html, body
   height: 100%
 
+.wrapper
+  min-height: 100%
+  display: flex
+  flex-direction: column
+
 .container
   max-width: 1350px
   padding: 0 15px
   margin: 0 auto
-  min-height: 100%
-  display: flex
-  flex-direction: column
 
 .container-about
   max-width: 1110px
@@ -73,6 +75,10 @@ html, body
     &-navigation-list
       display: flex
       justify-content: flex-end
+      & li:nth-of-type(1) a:link, & li:nth-of-type(1) a
+        @include link-hover-pink
+        border-bottom: 2px solid $color_accent-pink
+        padding-bottom: 3px
       & li:not(:last-of-type)
         margin-right: 15px
       & li a
@@ -87,12 +93,69 @@ html, body
           padding-bottom: 3px
 
 
+
 .main
   display: flex
   flex: 1 1 auto
-  padding-top: 60px
+  padding: 60px 0
   &__block
     display: flex
+    &-label
+      @include h1-label-pink
+      margin-bottom: 28px
+    &-text
+      @include text-normal (19px, 30px)
+      max-width: 662px
+      overflow: hidden
+      max-height: 260px
+      margin-bottom: 30px
+    & .text-2
+      max-height: 300px
+    &-score
+      @include h2-label-pink
+    &-rating
+      border-left: 4px solid $color_gray-separator
+      height: fit-content
+      padding-left: 30px
+      &-img
+        display: flex
+        align-items: center
+        column-gap: 12px
+        max-width: 150px
+        overflow: hidden
+        margin-bottom: 10px
+      &-item:not(:last-of-type)
+        margin-bottom: 40px
+    & .no-line
+      border-left: none
+      padding-left: 60px
+      max-width: 362px
+      overflow: hidden
+      max-height: 160px
+    &-desc
+      @include text-normal (16px, 20px)
+      color: $color_main-blue
+      max-width: 354px
+      max-height: 40px
+      overflow: hidden
+
+.main__banner
+  width: 100%
+  margin-bottom: 60px
+  & img
+    display: block
+    width: 100%
+    height: auto
+    object-fit: cover
+
+.slider
+  background-color: $color_gray-bg
+  &__label
+    @include h3-labelCaps-blue
+    text-transform: uppercase
+    letter-spacing: 1px
+    text-align: center
+    margin: 30px 0
 
 .footer
   display: flex
