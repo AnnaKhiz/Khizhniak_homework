@@ -1,0 +1,68 @@
+@import 'variables'
+
+//labels
+@mixin h1-label-pink
+  font: normal 700 38px/46px 'Montserrat'
+  background: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%)
+  -webkit-background-clip: text
+  -webkit-text-fill-color: transparent
+  background-clip: text
+  text-fill-color: transparent
+
+@mixin h2-label-blue
+  font: normal 700 30px/37px 'Montserrat'
+  color: $color_main-blue
+
+@mixin h3-labelCaps-blue
+  font: normal 700 14px/17px 'Montserrat'
+  color: $color_main-blue
+
+@mixin h4-label-blue
+  font: normal 700 16px/20px 'Montserrat'
+  color: $color_main-blue
+
+//paragraph/text
+@mixin paragraph-text-black
+  font: normal 400 16px/26px 'Montserrat'
+  color: $color_block-text
+
+@mixin ul-ol-text-black
+  font: normal 400 18px/26px 'Montserrat'
+  color: $color_block-text
+
+@mixin text-normal ($fz, $fh)
+  font: 400 $fz 'Montserrat'
+  line-height: $fh
+  font-style: normal
+
+@mixin text-bold ($fz, $fh)
+  font: 700 $fz 'Montserrat'
+  line-height: $fh
+  font-style: normal
+
+@mixin text-normal ($fz, $fh)
+  font: 400 $fz 'Montserrat'
+  line-height: $fh
+  font-style: normal
+
+//links
+@mixin link-regular-blue
+  font: normal 700 16px/20px 'Montserrat'
+  color: $color_active-regular
+
+@mixin link-hover-pink
+  font: normal 700 16px/20px 'Montserrat'
+  color: $color_accent-pink
+
+//elements-header
+
+@mixin menu-dots
+  content: ''
+  display: inline-block
+  width: 6px
+  height: 6px
+  border-radius: 100%
+  background-color: $color_gray-separator
+  margin-left: 4px
+  margin-right: 4px
+  vertical-align: middle
