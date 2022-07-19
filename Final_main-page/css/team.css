@@ -1,0 +1,201 @@
+@font-face {
+  font-family: "Montserrat";
+  src: url("../fonts/Montserrat-Regular.ttf");
+  font-style: normal;
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("../fonts/Montserrat-Bold.ttf");
+  font-style: normal;
+  font-weight: 700;
+}
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+html, body, div, span, object, iframe, figure, p, blockquote, pre, a, code, em, img, small, strike, strong, sub, sup, tt, b, u, i, ol, ul, li, fieldset, form, label, table, caption, tbody, tfoot, thead, tr, th, td, main, canvas, embed, footer, header, nav, section, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 16px;
+  font: inherit;
+  vertical-align: baseline;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  text-size-adjust: none;
+}
+
+a, a:visited, a:hover {
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+footer, header, nav, section, main {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul, li {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+input {
+  -webkit-appearance: none;
+  border-radius: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+.container {
+  max-width: 1350px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 50px;
+}
+.header__logo-item-1 {
+  display: flex;
+  align-items: center;
+}
+.header__logo-text {
+  font: 400 2.25rem "Montserrat";
+  line-height: 2.75rem;
+  font-style: normal;
+  color: #323264;
+}
+.header__info-contacts {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 18.5px;
+}
+.header__info-contacts-list {
+  display: flex;
+  align-items: center;
+}
+.header__info-contacts-list a > svg {
+  fill: #B3B3BA;
+}
+.header__info-contacts-list a > svg:hover {
+  fill: #F0145A;
+}
+.header__info-contacts-list li.regular {
+  font: 400 1rem "Montserrat";
+  line-height: 1.25rem;
+  font-style: normal;
+  color: #B3B3BA;
+}
+.header__info-contacts-list li.regular + li a {
+  font: 700 1rem "Montserrat";
+  line-height: 1.25rem;
+  font-style: normal;
+  color: #B3B3BA;
+}
+.header__info-contacts-list li.dot:after {
+  content: "";
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 100%;
+  background-color: #E6E6F0;
+  margin-left: 4px;
+  margin-right: 4px;
+  vertical-align: middle;
+}
+.header__info-contacts-sublist {
+  display: flex;
+}
+.header__info-contacts-sublist li a {
+  font: 700 0.75rem "Montserrat";
+  line-height: 0.9375rem;
+  font-style: normal;
+  color: #B3B3BA;
+  padding: 5px 7px;
+  border-radius: 8px;
+  background-color: none;
+}
+.header__info-contacts-sublist li:nth-of-type(3) a:link, .header__info-contacts-sublist li:nth-of-type(3) a {
+  background-color: #F0145A;
+  color: #ffffff;
+}
+.header__info-contacts-sublist li a:hover {
+  background-color: #F5F5FA;
+  color: #B3B3BA;
+}
+.header__info-contacts-sublist li:nth-of-type(3):after {
+  content: "";
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 100%;
+  background-color: #E6E6F0;
+  margin-left: 4px;
+  margin-right: 4px;
+  vertical-align: middle;
+}
+.header__info-navigation-list {
+  display: flex;
+  justify-content: flex-end;
+}
+.header__info-navigation-list li:nth-of-type(1) a:link, .header__info-navigation-list li:nth-of-type(1) a {
+  font: normal 700 1rem/1.25rem "Montserrat";
+  color: #F0145A;
+  border-bottom: 2px solid #F0145A;
+  padding-bottom: 3px;
+}
+.header__info-navigation-list li:not(:last-of-type) {
+  margin-right: 15px;
+}
+.header__info-navigation-list li a {
+  font: normal 700 1rem/1.25rem "Montserrat";
+  color: #24A3FF;
+}
+.header__info-navigation-list li a:hover {
+  font: normal 700 1rem/1.25rem "Montserrat";
+  color: #24A3FF;
+  border-bottom: 2px solid #24A3FF;
+  padding-bottom: 3px;
+}
+.header__info-navigation-list li a:active {
+  font: normal 700 1rem/1.25rem "Montserrat";
+  color: #F0145A;
+  border-bottom: 2px solid #F0145A;
+  padding-bottom: 3px;
+}

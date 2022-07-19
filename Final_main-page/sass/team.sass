@@ -1,0 +1,82 @@
+@import 'variables'
+@import 'fonts'
+@import 'mixins'
+@import 'reset'
+@import 'header'
+
+//html *
+  border: 1px solid green
+html, body
+  height: 100%
+
+.container
+  max-width: 1350px
+  padding: 0 15px
+  margin: 0 auto
+
+.header
+  display: flex
+  justify-content: space-between
+  align-items: center
+  padding-top: 50px
+  &__logo-item-1
+    display: flex
+    align-items: center
+  &__logo-text
+    @include text-normal (2.25rem, 2.75rem)
+    color: $color_main-blue
+  &__info
+    &-contacts
+      display: flex
+      flex-wrap: wrap
+      margin-bottom: 18.5px
+      &-list
+        display: flex
+        align-items: center
+        & a>svg
+          fill: $color_gray-text
+        & a>svg:hover
+          fill: #F0145A
+        & li.regular
+          @include text-normal (1rem, 1.25rem)
+          color: $color_gray-text
+        & li.regular + li a
+          @include text-bold (1rem, 1.25rem)
+          color: $color_gray-text
+        & li.dot:after
+          @include menu-dots
+      &-sublist
+        display: flex
+        & li a
+          @include text-bold (0.75rem, 0.9375rem)
+          color: $color_gray-text
+          padding: 5px 7px
+          border-radius: 8px
+          background-color: none
+        & li:nth-of-type(3) a:link, & li:nth-of-type(3) a
+          background-color: $color_accent-pink
+          color: $color_hover-text
+        & li a:hover
+          background-color: $color_gray-bg
+          color: $color_gray-text
+        & li:nth-of-type(3):after
+          @include menu-dots
+    &-navigation-list
+      display: flex
+      justify-content: flex-end
+      & li:nth-of-type(1) a:link, & li:nth-of-type(1) a
+        @include link-hover-pink
+        border-bottom: 2px solid $color_accent-pink
+        padding-bottom: 3px
+      & li:not(:last-of-type)
+        margin-right: 15px
+      & li a
+        @include link-regular-blue
+        &:hover
+          @include link-regular-blue
+          border-bottom: 2px solid $color_active-regular
+          padding-bottom: 3px
+        &:active
+          @include link-hover-pink
+          border-bottom: 2px solid $color_accent-pink
+          padding-bottom: 3px
