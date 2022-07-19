@@ -64,7 +64,7 @@ html, body
     &-navigation-list
       display: flex
       justify-content: flex-end
-      & li:nth-of-type(1) a:link, & li:nth-of-type(1) a
+      & li:nth-of-type(3) a:link, & li:nth-of-type(3) a
         @include link-hover-pink
         border-bottom: 2px solid $color_accent-pink
         padding-bottom: 3px
@@ -80,3 +80,88 @@ html, body
           @include link-hover-pink
           border-bottom: 2px solid $color_accent-pink
           padding-bottom: 3px
+
+.main
+  padding-bottom: 60px
+  &__flex-container
+    display: flex
+    flex-wrap: wrap
+    column-gap: 60px
+    row-gap: 60px
+  &__flex-item
+    width: 33.333%
+  &__label
+    @include h1-label-pink
+    max-width: 1080px
+    overflow: hidden
+    text-align: left
+    margin: 60px auto
+  &__flex-item
+    max-width: 400px
+  &__flex-img
+    max-width: 400px
+    height: auto
+    margin-bottom: 15px
+    & img
+      width: 100%
+      object-fit: cover
+  &__flex-sub
+    display: flex
+    justify-content: space-between
+
+  &__flex-name
+    @include h4-label-blue
+  &__flex-post
+    @include text-normal (0.875rem, 1.375rem)
+    color: $color_gray-text
+
+.footer
+  background-color: $color_gray-bg
+  padding: 0px 0px 30px 0px
+  &:before
+    content: ''
+    display: block
+    height: 2px
+    margin: 0px auto 30px auto
+    background-color: $color_gray-separator
+    max-width: 1350px
+    padding: 0 15px
+  &__flex
+    display: flex
+    justify-content: space-between
+
+  &__info-adress ul
+    display: flex
+    margin-bottom: 21px
+    align-items: center
+    & li:not(:last-of-type):after
+      @include menu-dots
+    & li.regular
+      @include text-normal (1rem, 1.25rem)
+      color: $color_gray-text
+    & li.ft-link a
+      @include text-bold (0.75rem, 0.9375rem)
+      color: $color_active-regular
+      text-transform: uppercase
+      letter-spacing: 1px
+  &__info-contacts ul
+    display: flex
+    align-items: center
+    & li:not(:last-of-type):after
+      @include menu-dots //съехала точка. почему?
+    & li:nth-of-type(2) a
+      @include text-bold (1rem, 1.25rem)
+      color: $color_main-alt
+    & li:last-of-type a
+      text-decoration: none
+      @include text-bold (1rem, 1.25rem)
+      color: $color_active-regular
+      &:hover
+        color: $color_accent-pink
+    & li a>svg
+      fill: $color_active-regular
+    & li a>svg:hover
+      fill: $color_accent-pink
+  &__copyright-text
+    @include text-normal (1rem, 1.25rem)
+    color: $color_gray-text
