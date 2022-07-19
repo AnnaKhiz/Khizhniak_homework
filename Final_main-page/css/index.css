@@ -18,7 +18,7 @@ html, body, div, span, object, iframe, figure, p, blockquote, pre, a, code, em, 
   margin: 0;
   padding: 0;
   border: 0;
-  font-size: 100%;
+  font-size: 16px;
   font: inherit;
   vertical-align: baseline;
   text-rendering: optimizeLegibility;
@@ -102,8 +102,8 @@ html, body {
   align-items: center;
 }
 .header__logo-text {
-  font: 400 36px "Montserrat";
-  line-height: 44px;
+  font: 400 2.25rem "Montserrat";
+  line-height: 2.75rem;
   font-style: normal;
   color: #323264;
 }
@@ -116,21 +116,21 @@ html, body {
   display: flex;
   align-items: center;
 }
-.header__info-contacts-list a > i {
-  color: #B3B3BA;
+.header__info-contacts-list a > svg {
+  fill: #B3B3BA;
 }
-.header__info-contacts-list a > i:hover {
-  color: #F0145A;
+.header__info-contacts-list a > svg:hover {
+  fill: #F0145A;
 }
 .header__info-contacts-list li.regular {
-  font: 400 16px "Montserrat";
-  line-height: 20px;
+  font: 400 1rem "Montserrat";
+  line-height: 1.25rem;
   font-style: normal;
   color: #B3B3BA;
 }
 .header__info-contacts-list li.regular + li a {
-  font: 700 16px "Montserrat";
-  line-height: 20px;
+  font: 700 1rem "Montserrat";
+  line-height: 1.25rem;
   font-style: normal;
   color: #B3B3BA;
 }
@@ -149,8 +149,8 @@ html, body {
   display: flex;
 }
 .header__info-contacts-sublist li a {
-  font: 700 12px "Montserrat";
-  line-height: 15px;
+  font: 700 0.75rem "Montserrat";
+  line-height: 0.9375rem;
   font-style: normal;
   color: #B3B3BA;
   padding: 5px 7px;
@@ -181,7 +181,7 @@ html, body {
   justify-content: flex-end;
 }
 .header__info-navigation-list li:nth-of-type(1) a:link, .header__info-navigation-list li:nth-of-type(1) a {
-  font: normal 700 16px/20px "Montserrat";
+  font: normal 700 1rem/1.25rem "Montserrat";
   color: #F0145A;
   border-bottom: 2px solid #F0145A;
   padding-bottom: 3px;
@@ -190,17 +190,17 @@ html, body {
   margin-right: 15px;
 }
 .header__info-navigation-list li a {
-  font: normal 700 16px/20px "Montserrat";
+  font: normal 700 1rem/1.25rem "Montserrat";
   color: #24A3FF;
 }
 .header__info-navigation-list li a:hover {
-  font: normal 700 16px/20px "Montserrat";
+  font: normal 700 1rem/1.25rem "Montserrat";
   color: #24A3FF;
   border-bottom: 2px solid #24A3FF;
   padding-bottom: 3px;
 }
 .header__info-navigation-list li a:active {
-  font: normal 700 16px/20px "Montserrat";
+  font: normal 700 1rem/1.25rem "Montserrat";
   color: #F0145A;
   border-bottom: 2px solid #F0145A;
   padding-bottom: 3px;
@@ -216,7 +216,7 @@ html, body {
   margin-bottom: 60px;
 }
 .main__block-label {
-  font: normal 700 38px/46px "Montserrat";
+  font: normal 700 2.375rem/2.875rem "Montserrat";
   background: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -227,8 +227,8 @@ html, body {
   overflow: hidden;
 }
 .main__block-text {
-  font: 400 19px "Montserrat";
-  line-height: 30px;
+  font: 400 1.1875rem "Montserrat";
+  line-height: 1.875rem;
   font-style: normal;
   max-width: 662px;
   overflow: hidden;
@@ -241,7 +241,7 @@ html, body {
   max-height: 300px;
 }
 .main__block-score {
-  font: normal 700 36px/44px "Montserrat";
+  font: normal 700 2.25rem/2.75rem "Montserrat";
   background: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -273,8 +273,8 @@ html, body {
   max-height: 1;
 }
 .main__block-desc {
-  font: 400 16px "Montserrat";
-  line-height: 20px;
+  font: 400 1rem "Montserrat";
+  line-height: 1.25rem;
   font-style: normal;
   color: #323264;
   max-width: 354px;
@@ -297,7 +297,7 @@ html, body {
   background-color: #F5F5FA;
 }
 .slider__label {
-  font: normal 700 14px/17px "Montserrat";
+  font: normal 700 0.875rem/1.0625rem "Montserrat";
   color: #323264;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -312,7 +312,7 @@ div.swiper {
 }
 div.swiper-slide {
   text-align: center;
-  font-size: 18px;
+  font-size: 1.125rem;
   background: #fff;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -332,6 +332,15 @@ div.swiper-slide img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+span.swiper-pagination-bullet {
+  width: var(--swiper-pagination-bullet-width, var(--swiper-pagination-bullet-size, 16px));
+  height: var(--swiper-pagination-bullet-height, var(--swiper-pagination-bullet-size, 16px));
+  background-color: var(--swiper-pagination-bullet-inactive-color, #24A3FF);
+}
+span.swiper-pagination-bullet:last-of-type {
+  display: none;
 }
 
 div.swiper-horizontal > .swiper-pagination-bullets,
@@ -374,14 +383,14 @@ div.swiper-horizontal > .swiper-pagination-bullets,
   vertical-align: middle;
 }
 .footer__info-adress ul li.regular {
-  font: 400 16px "Montserrat";
-  line-height: 20px;
+  font: 400 1rem "Montserrat";
+  line-height: 1.25rem;
   font-style: normal;
   color: #B3B3BA;
 }
 .footer__info-adress ul li.ft-link a {
-  font: 700 12px "Montserrat";
-  line-height: 15px;
+  font: 700 0.75rem "Montserrat";
+  line-height: 0.9375rem;
   font-style: normal;
   color: #24A3FF;
   text-transform: uppercase;
@@ -403,30 +412,30 @@ div.swiper-horizontal > .swiper-pagination-bullets,
   vertical-align: middle;
 }
 .footer__info-contacts ul li:nth-of-type(2) a {
-  font: 700 16px "Montserrat";
-  line-height: 20px;
+  font: 700 1rem "Montserrat";
+  line-height: 1.25rem;
   font-style: normal;
   color: #46466E;
 }
 .footer__info-contacts ul li:last-of-type a {
   text-decoration: none;
-  font: 700 16px "Montserrat";
-  line-height: 20px;
+  font: 700 1rem "Montserrat";
+  line-height: 1.25rem;
   font-style: normal;
   color: #24A3FF;
 }
 .footer__info-contacts ul li:last-of-type a:hover {
   color: #F0145A;
 }
-.footer__info-contacts ul li a > i {
-  color: #B3B3BA;
+.footer__info-contacts ul li a > svg {
+  fill: #24A3FF;
 }
-.footer__info-contacts ul li a > i:hover {
-  color: #F0145A;
+.footer__info-contacts ul li a > svg:hover {
+  fill: #F0145A;
 }
 .footer__copyright-text {
-  font: 400 16px "Montserrat";
-  line-height: 20px;
+  font: 400 1rem "Montserrat";
+  line-height: 1.25rem;
   font-style: normal;
   color: #B3B3BA;
 }
