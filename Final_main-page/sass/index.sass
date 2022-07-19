@@ -4,20 +4,16 @@
 @import 'reset'
 @import 'header'
 
-html *
+//html *
   border: 1px solid green
 html, body
   height: 100%
-
-.wrapper
-  min-height: 100%
-  display: flex
-  flex-direction: column
 
 .container
   max-width: 1350px
   padding: 0 15px
   margin: 0 auto
+
 
 .container-about
   max-width: 1110px
@@ -94,8 +90,6 @@ html, body
 
 
 .main
-  display: flex
-  flex: 1 1 auto
   padding-top: 60px
   &__block
     display: flex
@@ -104,6 +98,8 @@ html, body
     &-label
       @include h1-label-pink
       margin-bottom: 28px
+      max-width: 662px
+      overflow: hidden
     &-text
       @include text-normal (19px, 30px)
       max-width: 662px
@@ -118,6 +114,7 @@ html, body
     &-rating
       border-left: 4px solid $color_gray-separator
       height: fit-content
+      margin-left: 30px
       padding-left: 30px
       &-img
         display: flex
@@ -130,7 +127,7 @@ html, body
         margin-bottom: 40px
     & .no-line
       border-left: none
-      padding-left: 60px
+      padding-left: 30px
       max-width: 362px
       overflow: hidden
       max-height: 1
@@ -157,7 +154,86 @@ html, body
     text-transform: uppercase
     letter-spacing: 1px
     text-align: center
-    margin: 30px 0
+    padding: 30px 0
+    margin: 0
+div.swiper
+  margin-top: 0px
+  padding-bottom: 76px
+  &-slide
+    text-align: center
+    font-size: 18px
+    background: #fff
+    display: -webkit-box
+    display: -ms-flexbox
+    display: -webkit-flex
+    display: flex
+    -webkit-box-pack: center
+    -ms-flex-pack: center
+    -webkit-justify-content: center
+    justify-content: center
+    -webkit-box-align: center
+    -ms-flex-align: center
+    -webkit-align-items: center
+    align-items: center
+    & img
+      display: block
+      width: 100%
+      height: 100%
+      object-fit: cover
+div.swiper-horizontal>.swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal,
+.swiper-pagination-custom, .swiper-pagination-fraction
+  bottom: 30px
 
 .footer
-  display: flex
+  background-color: $color_gray-bg
+  padding: 0px 0px 30px 0px
+  &:before
+    content: ''
+    display: block
+    height: 2px
+    margin: 0px auto 30px auto
+    background-color: $color_gray-separator
+    max-width: 1350px
+    padding: 0 15px
+  &__flex
+    display: flex
+    justify-content: space-between
+
+  &__info-adress ul
+    display: flex
+    margin-bottom: 21px
+    align-items: center
+    & li:not(:last-of-type):after
+      @include menu-dots
+    & li.regular
+      @include text-normal (16px, 20px)
+      color: $color_gray-text
+    & li.ft-link a
+      @include text-bold (12px, 15px)
+      color: $color_active-regular
+      text-transform: uppercase
+      letter-spacing: 1px
+  &__info-contacts ul
+    display: flex
+    align-items: center
+    & li:not(:last-of-type):after
+      @include menu-dots
+    & li:first-of-type:after
+      //margin-bottom: 15px - съезжает точка wtf???
+    & li:nth-of-type(2) a
+      @include text-bold (16px, 20px)
+      color: $color_main-alt
+    & li:last-of-type a
+      text-decoration: none
+      @include text-bold (16px, 20px)
+      color: $color_active-regular
+      &:hover
+        color: $color_accent-pink
+    & li a>i
+      color: $color_gray-text
+    & li a>i:hover
+      color: $color_accent-pink
+  &__copyright-text
+    @include text-normal (16px, 20px)
+    color: $color_gray-text

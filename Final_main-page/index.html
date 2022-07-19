@@ -6,11 +6,12 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
     <script src="https://kit.fontawesome.com/bdd2ca727e.js" crossorigin="anonymous"></script>
     <title>Document</title>
 </head>
 <body>
-<div class="wrapper">
+
     <div class="container">
         <header class="header">
 
@@ -49,7 +50,7 @@
                     </ul>
                 </div>
 
-                <div class="header__info-navigation">
+                <nav class="header__info-navigation">
                     <ul class="header__info-navigation-list">
                         <li><a href="#">about us</a></li>
                         <li><a href="#">services</a></li>
@@ -57,19 +58,13 @@
                         <li><a href="#">publications</a></li>
                         <li><a href="#">contact</a></li>
                     </ul>
-
-                </div>
-
-
+                </nav>
             </div>
-
-
-
         </header>
-
+    </div>
     <main class="main">
-       <div class="container-about">
 
+       <div class="container-about">
            <section class="main__block">
 
                <div class="main__block-info">
@@ -123,12 +118,12 @@
 
            </section>
        </div>
-    </div>
             <section class="main__banner">
                 <img src="./img/about-photo.png" alt="image banner">
             </section>
-    <div class="container-about">
+        </div>
 
+    <div class="container-about">
         <section class="main__block">
 
             <div class="main__block-info">
@@ -156,6 +151,17 @@
             <h3 class="slider__label">
                 achievements
             </h3>
+
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="./img/item1.png" alt="image for slider"></div>
+                    <div class="swiper-slide"><img src="./img/item2.png" alt="image for slider"></div>
+                    <div class="swiper-slide"><img src="./img/item3.png" alt="image for slider"></div>
+                    <div class="swiper-slide"><img src="./img/item4.png" alt="image for slider"></div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+
         </div>
     </section>
 
@@ -164,9 +170,36 @@
 
 
     <footer class="footer">
-        footer
-    </footer>
+        <div class="container">
+            <div class="footer__flex">
+                <div class="footer__info">
+                    <div class="footer__info-adress">
+                        <ul>
+                            <li class="dot regular">Kyiv, Mechnikova str, 14/1</li>
+                            <li class="ft-link"><a href="#">On map</a></li>
+                        </ul>
+                    </div>
 
-</div>
+                    <div class="footer__info-contacts">
+                        <ul>
+                            <li><a href="#"><i class="fa-brands fa-facebook fa-2x"></i></a></li>
+                            <li><a href="tel:+380800211927">0800 211 927</a></li>
+                            <li><a href="mailto:contact@forstudy.space">contact@forstudy.space</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="footer__copyright">
+                    <p class="footer__copyright-text">
+                        © 2021 HLEGAL Law company, LLC
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+    </footer>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script src="js/index.js"></script>
 </body>
 </html>
