@@ -41,8 +41,10 @@ html, body
         align-items: center
         & a>svg
           fill: $color_gray-text
+          transition: $trans
         & a>svg:hover
           fill: #F0145A
+          transition: $trans
         & li.regular
           @include text-normal (1rem, 1.25rem)
           color: $color_gray-text
@@ -62,9 +64,11 @@ html, body
         & li:nth-of-type(3) a:link, & li:nth-of-type(3) a
           background-color: $color_accent-pink
           color: $color_hover-text
+          transition: $trans
         & li a:hover
           background-color: $color_gray-bg
           color: $color_gray-text
+          transition: $trans
         & li:nth-of-type(3):after
           @include menu-dots
     &-navigation-list
@@ -78,10 +82,12 @@ html, body
         margin-right: 15px
       & li a
         @include link-regular-blue
+        transition: $trans
         &:hover
           @include link-regular-blue
           border-bottom: 2px solid $color_active-regular
           padding-bottom: 3px
+          transition: $trans
         &:active
           @include link-hover-pink
           border-bottom: 2px solid $color_accent-pink
@@ -211,7 +217,7 @@ div.swiper-horizontal>.swiper-pagination-bullets,
     margin-bottom: 21px
     align-items: center
     & li:not(:last-of-type):after
-      @include menu-dots
+      @include menu-dots-team
     & li.regular
       @include text-normal (1rem, 1.25rem)
       color: $color_gray-text
@@ -224,7 +230,7 @@ div.swiper-horizontal>.swiper-pagination-bullets,
     display: flex
     align-items: center
     & li:not(:last-of-type):after
-      @include menu-dots //съехала точка. почему?
+      @include menu-dots-team //съехала точка. почему?
     & li:nth-of-type(2) a
       @include text-bold (1rem, 1.25rem)
       color: $color_main-alt
@@ -232,12 +238,16 @@ div.swiper-horizontal>.swiper-pagination-bullets,
       text-decoration: none
       @include text-bold (1rem, 1.25rem)
       color: $color_active-regular
+      transition: $trans
       &:hover
         color: $color_accent-pink
+        transition: $trans
     & li a>svg
       fill: $color_active-regular
+      transition: $trans
     & li a>svg:hover
       fill: $color_accent-pink
+      transition: $trans
   &__copyright-text
     @include text-normal (1rem, 1.25rem)
     color: $color_gray-text

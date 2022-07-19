@@ -85,6 +85,12 @@ html, body {
   margin: 0 auto;
 }
 
+.container-about {
+  max-width: 1110px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
 .header {
   display: flex;
   justify-content: space-between;
@@ -112,9 +118,11 @@ html, body {
 }
 .header__info-contacts-list a > svg {
   fill: #B3B3BA;
+  transition: all ease-in-out 0.3s;
 }
 .header__info-contacts-list a > svg:hover {
   fill: #F0145A;
+  transition: all ease-in-out 0.3s;
 }
 .header__info-contacts-list li.regular {
   font: 400 1rem "Montserrat";
@@ -154,10 +162,12 @@ html, body {
 .header__info-contacts-sublist li:nth-of-type(3) a:link, .header__info-contacts-sublist li:nth-of-type(3) a {
   background-color: #F0145A;
   color: #ffffff;
+  transition: all ease-in-out 0.3s;
 }
 .header__info-contacts-sublist li a:hover {
   background-color: #F5F5FA;
   color: #B3B3BA;
+  transition: all ease-in-out 0.3s;
 }
 .header__info-contacts-sublist li:nth-of-type(3):after {
   content: "";
@@ -186,12 +196,14 @@ html, body {
 .header__info-navigation-list li a {
   font: normal 700 1rem/1.25rem "Montserrat";
   color: #24A3FF;
+  transition: all ease-in-out 0.3s;
 }
 .header__info-navigation-list li a:hover {
   font: normal 700 1rem/1.25rem "Montserrat";
   color: #24A3FF;
   border-bottom: 2px solid #24A3FF;
   padding-bottom: 3px;
+  transition: all ease-in-out 0.3s;
 }
 .header__info-navigation-list li a:active {
   font: normal 700 1rem/1.25rem "Montserrat";
@@ -206,7 +218,7 @@ html, body {
 .main__flex-container {
   display: flex;
   flex-wrap: wrap;
-  column-gap: 60px;
+  justify-content: space-between;
   row-gap: 60px;
 }
 .main__flex-item {
@@ -240,6 +252,16 @@ html, body {
   display: flex;
   justify-content: space-between;
 }
+.main__flex-sub a > svg {
+  fill: #F5F5FA;
+  stroke: #24A3FF;
+  transition: all ease-in-out 0.3s;
+}
+.main__flex-sub a > svg:hover {
+  transition: all ease-in-out 0.3s;
+  fill: #F0145A;
+  stroke: #ffffff;
+}
 .main__flex-name {
   font: normal 700 1rem/1.25rem "Montserrat";
   color: #323264;
@@ -249,6 +271,93 @@ html, body {
   line-height: 1.375rem;
   font-style: normal;
   color: #B3B3BA;
+}
+
+.main-team {
+  display: flex;
+  justify-content: space-between;
+  column-gap: 60px;
+  padding: 60px 0;
+}
+.main-team__info {
+  max-width: 620px;
+  overflow: hidden;
+}
+.main-team__info-name {
+  font: normal 700 2.375rem/2.875rem "Montserrat";
+  background: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  margin-top: 0px;
+  margin-bottom: 15px;
+}
+.main-team__info-contacts:after {
+  content: "";
+  display: block;
+  height: 4px;
+  width: 620px;
+  background-color: #E6E6F0;
+  margin: 30px 0;
+}
+.main-team__info-contacts ul {
+  display: flex;
+  align-items: center;
+}
+.main-team__info-contacts ul li:not(:last-of-type):after {
+  content: "";
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 100%;
+  background-color: #E6E6F0;
+  margin-left: 10px;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+.main-team__info-contacts ul li:first-of-type {
+  font: 400 0.875rem "Montserrat";
+  line-height: 1.375rem;
+  font-style: normal;
+  color: #B3B3BA;
+}
+.main-team__info-contacts ul li:nth-of-type(2) a {
+  font: 400 1rem "Montserrat";
+  line-height: 1.25rem;
+  font-style: normal;
+  text-decoration: none;
+  color: #24A3FF;
+  transition: all ease-in-out 0.3s;
+}
+.main-team__info-contacts ul li:nth-of-type(2) a:hover {
+  color: #F0145A;
+  transition: all ease-in-out 0.3s;
+}
+.main-team__info-contacts ul li:last-of-type a {
+  font: 400 1rem "Montserrat";
+  line-height: 1.25rem;
+  font-style: normal;
+  color: #24A3FF;
+  transition: all ease-in-out 0.3s;
+}
+.main-team__info-contacts ul li:last-of-type a:hover {
+  color: #F0145A;
+  transition: all ease-in-out 0.3s;
+}
+.main-team__info-text {
+  font: normal 400 1rem/1.625rem "Montserrat";
+  color: #000000;
+}
+.main-team__info-text:not(:last-of-type) {
+  margin-bottom: 26px;
+}
+.main-team__info-label {
+  font: normal 700 0.875rem/1.0625rem "Montserrat";
+  color: #323264;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
 }
 
 .footer {
@@ -280,8 +389,8 @@ html, body {
   height: 6px;
   border-radius: 100%;
   background-color: #E6E6F0;
-  margin-left: 4px;
-  margin-right: 4px;
+  margin-left: 10px;
+  margin-right: 10px;
   vertical-align: middle;
 }
 .footer__info-adress ul li.regular {
@@ -309,8 +418,8 @@ html, body {
   height: 6px;
   border-radius: 100%;
   background-color: #E6E6F0;
-  margin-left: 4px;
-  margin-right: 4px;
+  margin-left: 10px;
+  margin-right: 10px;
   vertical-align: middle;
 }
 .footer__info-contacts ul li:nth-of-type(2) a {
@@ -325,15 +434,19 @@ html, body {
   line-height: 1.25rem;
   font-style: normal;
   color: #24A3FF;
+  transition: all ease-in-out 0.3s;
 }
 .footer__info-contacts ul li:last-of-type a:hover {
   color: #F0145A;
+  transition: all ease-in-out 0.3s;
 }
 .footer__info-contacts ul li a > svg {
   fill: #24A3FF;
+  transition: all ease-in-out 0.3s;
 }
 .footer__info-contacts ul li a > svg:hover {
   fill: #F0145A;
+  transition: all ease-in-out 0.3s;
 }
 .footer__copyright-text {
   font: 400 1rem "Montserrat";

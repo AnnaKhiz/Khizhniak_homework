@@ -118,9 +118,11 @@ html, body {
 }
 .header__info-contacts-list a > svg {
   fill: #B3B3BA;
+  transition: all ease-in-out 0.3s;
 }
 .header__info-contacts-list a > svg:hover {
   fill: #F0145A;
+  transition: all ease-in-out 0.3s;
 }
 .header__info-contacts-list li.regular {
   font: 400 1rem "Montserrat";
@@ -160,10 +162,12 @@ html, body {
 .header__info-contacts-sublist li:nth-of-type(3) a:link, .header__info-contacts-sublist li:nth-of-type(3) a {
   background-color: #F0145A;
   color: #ffffff;
+  transition: all ease-in-out 0.3s;
 }
 .header__info-contacts-sublist li a:hover {
   background-color: #F5F5FA;
   color: #B3B3BA;
+  transition: all ease-in-out 0.3s;
 }
 .header__info-contacts-sublist li:nth-of-type(3):after {
   content: "";
@@ -192,12 +196,14 @@ html, body {
 .header__info-navigation-list li a {
   font: normal 700 1rem/1.25rem "Montserrat";
   color: #24A3FF;
+  transition: all ease-in-out 0.3s;
 }
 .header__info-navigation-list li a:hover {
   font: normal 700 1rem/1.25rem "Montserrat";
   color: #24A3FF;
   border-bottom: 2px solid #24A3FF;
   padding-bottom: 3px;
+  transition: all ease-in-out 0.3s;
 }
 .header__info-navigation-list li a:active {
   font: normal 700 1rem/1.25rem "Montserrat";
@@ -378,8 +384,8 @@ div.swiper-horizontal > .swiper-pagination-bullets,
   height: 6px;
   border-radius: 100%;
   background-color: #E6E6F0;
-  margin-left: 4px;
-  margin-right: 4px;
+  margin-left: 10px;
+  margin-right: 10px;
   vertical-align: middle;
 }
 .footer__info-adress ul li.regular {
@@ -407,8 +413,8 @@ div.swiper-horizontal > .swiper-pagination-bullets,
   height: 6px;
   border-radius: 100%;
   background-color: #E6E6F0;
-  margin-left: 4px;
-  margin-right: 4px;
+  margin-left: 10px;
+  margin-right: 10px;
   vertical-align: middle;
 }
 .footer__info-contacts ul li:nth-of-type(2) a {
@@ -423,15 +429,19 @@ div.swiper-horizontal > .swiper-pagination-bullets,
   line-height: 1.25rem;
   font-style: normal;
   color: #24A3FF;
+  transition: all ease-in-out 0.3s;
 }
 .footer__info-contacts ul li:last-of-type a:hover {
   color: #F0145A;
+  transition: all ease-in-out 0.3s;
 }
 .footer__info-contacts ul li a > svg {
   fill: #24A3FF;
+  transition: all ease-in-out 0.3s;
 }
 .footer__info-contacts ul li a > svg:hover {
   fill: #F0145A;
+  transition: all ease-in-out 0.3s;
 }
 .footer__copyright-text {
   font: 400 1rem "Montserrat";
