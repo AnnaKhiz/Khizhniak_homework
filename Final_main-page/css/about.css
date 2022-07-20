@@ -185,7 +185,7 @@ html, body {
   display: flex;
   justify-content: flex-end;
 }
-.header__info-navigation-list li:nth-of-type(3) a:link, .header__info-navigation-list li:nth-of-type(3) a {
+.header__info-navigation-list li:nth-of-type(1) a:link, .header__info-navigation-list li:nth-of-type(1) a {
   font: normal 700 1rem/1.25rem "Montserrat";
   color: #F0145A;
   border-bottom: 2px solid #F0145A;
@@ -214,151 +214,146 @@ html, body {
 }
 
 .main {
-  padding-bottom: 60px;
+  padding-top: 60px;
 }
-.main__flex-container {
+.main__block {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  row-gap: 60px;
 }
-.main__flex-item {
-  width: 33.333%;
+.main__block-info {
+  margin-bottom: 60px;
 }
-.main__label {
+.main__block-label {
   font: normal 700 2.375rem/2.875rem "Montserrat";
   background: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   text-fill-color: transparent;
-  max-width: 1080px;
+  margin-bottom: 28px;
+  max-width: 662px;
   overflow: hidden;
-  text-align: left;
-  margin: 60px auto;
 }
-.main__flex-item {
-  max-width: 400px;
-}
-.main__flex-img {
-  max-width: 400px;
-  height: auto;
-  margin-bottom: 15px;
-}
-.main__flex-img img {
-  width: 100%;
-  object-fit: cover;
-}
-.main__flex-sub {
-  display: flex;
-  justify-content: space-between;
-}
-.main__flex-sub a > svg {
-  fill: #F5F5FA;
-  stroke: #24A3FF;
-  transition: all ease-in-out 0.3s;
-}
-.main__flex-sub a > svg:hover {
-  transition: all ease-in-out 0.3s;
-  fill: #F0145A;
-  stroke: #ffffff;
-}
-.main__flex-name {
-  font: normal 700 1rem/1.25rem "Montserrat";
-  color: #323264;
-}
-.main__flex-post {
-  font: 400 0.875rem "Montserrat";
-  line-height: 1.375rem;
+.main__block-text {
+  font: 400 1.1875rem "Montserrat";
+  line-height: 1.875rem;
   font-style: normal;
-  color: #B3B3BA;
-}
-
-.main-team {
-  display: flex;
-  justify-content: space-between;
-  column-gap: 60px;
-  padding: 60px 0;
-}
-.main-team__info {
-  max-width: 620px;
+  max-width: 662px;
   overflow: hidden;
+  max-height: 260px;
 }
-.main-team__info-name {
-  font: normal 700 2.375rem/2.875rem "Montserrat";
+.main__block-text:not(:last-of-type) {
+  margin-bottom: 30px;
+}
+.main__block .text-2 {
+  max-height: 300px;
+}
+.main__block-score {
+  font: normal 700 2.25rem/2.75rem "Montserrat";
   background: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   text-fill-color: transparent;
-  margin-top: 0px;
-  margin-bottom: 15px;
 }
-.main-team__info-contacts:after {
-  content: "";
-  display: block;
-  height: 4px;
-  width: 620px;
-  background-color: #E6E6F0;
-  margin: 30px 0;
+.main__block-rating {
+  border-left: 4px solid #E6E6F0;
+  height: fit-content;
+  margin-left: 30px;
+  padding-left: 30px;
 }
-.main-team__info-contacts ul {
+.main__block-rating-img {
   display: flex;
   align-items: center;
+  column-gap: 12px;
+  max-width: 150px;
+  overflow: hidden;
+  margin-bottom: 10px;
 }
-.main-team__info-contacts ul li:not(:last-of-type):after {
-  content: "";
-  display: inline-block;
-  width: 6px;
-  height: 6px;
-  border-radius: 100%;
-  background-color: #E6E6F0;
-  margin-left: 10px;
-  margin-right: 10px;
-  vertical-align: middle;
+.main__block-rating-item:not(:last-of-type) {
+  margin-bottom: 40px;
 }
-.main-team__info-contacts ul li:first-of-type {
-  font: 400 0.875rem "Montserrat";
-  line-height: 1.375rem;
-  font-style: normal;
-  color: #B3B3BA;
+.main__block .no-line {
+  border-left: none;
+  padding-left: 30px;
+  max-width: 362px;
+  overflow: hidden;
+  max-height: 1;
 }
-.main-team__info-contacts ul li:nth-of-type(2) a {
+.main__block-desc {
   font: 400 1rem "Montserrat";
   line-height: 1.25rem;
   font-style: normal;
-  text-decoration: none;
-  color: #24A3FF;
-  transition: all ease-in-out 0.3s;
+  color: #323264;
+  max-width: 354px;
+  max-height: 40px;
+  overflow: hidden;
 }
-.main-team__info-contacts ul li:nth-of-type(2) a:hover {
-  color: #F0145A;
-  transition: all ease-in-out 0.3s;
+
+.main__banner {
+  width: 100%;
+  margin-bottom: 60px;
 }
-.main-team__info-contacts ul li:last-of-type a {
-  font: 400 1rem "Montserrat";
-  line-height: 1.25rem;
-  font-style: normal;
-  color: #24A3FF;
-  transition: all ease-in-out 0.3s;
+.main__banner img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
 }
-.main-team__info-contacts ul li:last-of-type a:hover {
-  color: #F0145A;
-  transition: all ease-in-out 0.3s;
+
+.slider {
+  background-color: #F5F5FA;
 }
-.main-team__info-text {
-  font: normal 400 1rem/1.625rem "Montserrat";
-  color: #000000;
-}
-.main-team__info-text:not(:last-of-type) {
-  margin-bottom: 26px;
-}
-.main-team__info-label {
+.slider__label {
   font: normal 700 0.875rem/1.0625rem "Montserrat";
   color: #323264;
   text-transform: uppercase;
   letter-spacing: 1px;
-  margin-bottom: 15px;
+  text-align: center;
+  padding: 30px 0;
+  margin: 0;
+}
+
+div.swiper {
+  margin-top: 0px;
+  padding-bottom: 76px;
+}
+div.swiper-slide {
+  text-align: center;
+  font-size: 1.125rem;
+  background: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+div.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+span.swiper-pagination-bullet {
+  width: var(--swiper-pagination-bullet-width, var(--swiper-pagination-bullet-size, 16px));
+  height: var(--swiper-pagination-bullet-height, var(--swiper-pagination-bullet-size, 16px));
+  background-color: var(--swiper-pagination-bullet-inactive-color, #24A3FF);
+}
+span.swiper-pagination-bullet:last-of-type {
+  display: none;
+}
+
+div.swiper-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal,
+.swiper-pagination-custom, .swiper-pagination-fraction {
+  bottom: 30px;
 }
 
 .footer {

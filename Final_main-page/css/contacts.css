@@ -96,6 +96,7 @@ html, body {
   justify-content: space-between;
   align-items: center;
   padding-top: 50px;
+  padding-bottom: 30px;
 }
 .header__logo-item-1 {
   display: flex;
