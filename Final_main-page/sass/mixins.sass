@@ -48,10 +48,13 @@
   line-height: $fh
   font-style: normal
 
-@mixin text-normal ($fz, $fh)
-  font: 400 $fz 'Montserrat'
+@mixin text-boldCaps-blue ($fz, $fh)
+  font: 700 $fz 'Montserrat'
   line-height: $fh
   font-style: normal
+  color: $color_active-regular
+  letter-spacing: 1px
+  text-transform: uppercase
 
 //links
 @mixin link-regular-blue
@@ -61,6 +64,10 @@
 @mixin link-hover-pink
   font: normal 700 1rem/1.25rem 'Montserrat'
   color: $color_accent-pink
+
+@mixin link-hover-trans
+  color: $color_accent-pink
+  transition: $trans
 
 //elements-header
 
@@ -86,4 +93,10 @@
   margin-right: 10px
   vertical-align: middle
 
-
+@mixin gray-line ($w)
+  content: ''
+  display: block
+  height: 4px
+  width: $w
+  background-color: $color_gray-separator
+  margin: 30px 0

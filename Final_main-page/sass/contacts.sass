@@ -73,7 +73,7 @@ html, body
     &-navigation-list
       display: flex
       justify-content: flex-end
-      & li:nth-of-type(3) a:link, & li:nth-of-type(3) a
+      & li:last-of-type a:link, & li:last-of-type a
         @include link-hover-pink
         border-bottom: 2px solid $color_accent-pink
         padding-bottom: 3px
@@ -93,93 +93,43 @@ html, body
           padding-bottom: 3px
 
 .main
-  padding-bottom: 60px
-  &__flex-container
-    display: flex
-    flex-wrap: wrap
-    justify-content: space-between
-    row-gap: 60px
-  &__flex-item
-    width: 33.333%
-  &__label
-    @include h1-label-pink
-    max-width: 1080px
-    overflow: hidden
-    text-align: left
-    margin: 60px auto
-  &__flex-item
-    max-width: 400px
-  &__flex-img
-    max-width: 400px
-    height: auto
-    margin-bottom: 15px
-    & img
-      width: 100%
-      object-fit: cover
-  &__flex-sub
-    display: flex
-    justify-content: space-between
-    & a>svg
-      fill: $color_gray-bg
-      stroke: $color_active-regular
-      transition: $trans
-      &:hover
-        transition: $trans
-        fill: $color_accent-pink
-        stroke: $color_hover-text
-  &__flex-name
-    @include h4-label-blue
-  &__flex-post
-    @include text-normal (0.875rem, 1.375rem)
-    color: $color_gray-text
-
-
-.main-team
   display: flex
   justify-content: space-between
-  column-gap: 60px
   padding: 60px 0
-  &__info
-    max-width: 620px
-    overflow: hidden
-    &-name
-      @include h1-label-pink
-      margin-top: 0px
-      margin-bottom: 15px
-    &-contacts:after
-      @include gray-line (620px)
-    &-contacts ul
-      display: flex
-      align-items: center
-      & li:not(:last-of-type):after
-        @include menu-dots-team
-      & li:first-of-type
-        @include text-normal (0.875rem, 1.375rem)
-        color: $color_gray-text
-      & li:nth-of-type(2) a
-        @include text-normal (1rem, 1.25rem)
-        text-decoration: none
-        color: $color_active-regular
+  &__contacts-list li:nth-of-type(1),
+  &__contacts-list li:nth-of-type(2)
+    @include text-normal (1.3125rem, 1.875rem)
+    color: $color_main-blue
+  &__contacts-list li.line:after
+      @include gray-line (510px)
+  &__contacts-list li:nth-of-type(3) a
+    @include text-normal (1.3125rem, 1.875rem)
+    color: $color_main-alt
+    margin-bottom: 15px
+  &__contacts-list li:nth-of-type(4) a
+    @include text-normal (1.3125rem, 1.875rem)
+    color: $color_active-regular
+    transition: $trans
+    &:hover
+      @include link-hover-trans
+  &__contacts-sublist
+    display: flex
+    align-items: center
+    justify-content: flex-start
+    column-gap: 10px
+    & li a>svg
+      fill: $color_active-regular
+      transition: $trans
+      &:hover
+        fill: $color_accent-pink
         transition: $trans
-        &:hover
-          color: $color_accent-pink
-          transition: $trans
-      & li:last-of-type a
-        @include text-normal (1rem, 1.25rem)
-        color: $color_active-regular
-        transition: $trans
-        &:hover
-          color: $color_accent-pink
-          transition: $trans
-    &-text
-      @include paragraph-text-black
-    &-text:not(:last-of-type)
-      margin-bottom: 26px
-    &-label
-      @include h3-labelCaps-blue
-      text-transform: uppercase
-      letter-spacing: 1px
-      margin-bottom: 15px
+    & li:last-of-type
+      max-width: 115px
+    & li:last-of-type p
+      @include text-boldCaps-blue (0.75rem, 1rem)
+      transition: $trans
+      &:hover
+        @include link-hover-trans
 
 
 .footer
