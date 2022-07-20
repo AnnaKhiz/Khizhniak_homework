@@ -3,7 +3,15 @@
 //labels
 @mixin h1-label-pink
   font: normal 700 2.375rem/2.875rem 'Montserrat'
-  background: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%)
+  background: $color_gradient-redText
+  -webkit-background-clip: text
+  -webkit-text-fill-color: transparent
+  background-clip: text
+  text-fill-color: transparent
+
+@mixin h1-label-pink-2
+  font: normal 700 1.875rem/2.3125rem 'Montserrat'
+  background: $color_gradient-redText
   -webkit-background-clip: text
   -webkit-text-fill-color: transparent
   background-clip: text
@@ -11,7 +19,7 @@
 
 @mixin h2-label-pink
   font: normal 700 2.25rem/2.75rem 'Montserrat'
-  background: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%)
+  background: $color_gradient-redText
   -webkit-background-clip: text
   -webkit-text-fill-color: transparent
   background-clip: text
@@ -20,6 +28,9 @@
 @mixin h2-label-blue
   font: normal 700 1.875rem/2.3125rem 'Montserrat'
   color: $color_main-blue
+
+@mixin h3-label-caps
+  font: normal 700 0.875rem/1.0625rem 'Montserrat'
 
 @mixin h3-labelCaps-blue
   font: normal 700 0.875rem/1.0625rem 'Montserrat'
@@ -67,6 +78,10 @@
 
 @mixin link-hover-trans
   color: $color_accent-pink
+  transition: $trans
+
+@mixin btn-hover-trans
+  background-color: $color_accent-pink
   transition: $trans
 
 //elements-header

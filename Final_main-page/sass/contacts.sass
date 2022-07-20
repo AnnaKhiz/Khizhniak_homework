@@ -131,6 +131,57 @@ html, body
       &:hover
         @include link-hover-trans
 
+.main__form
+  input, textarea, button
+    display: block
+    width: 100%
+  & form
+    max-width: 510px
+    padding: 30px
+    background-color: $color_gray-bg
+    border-radius: 12px
+  &-label
+    @include h1-label-pink-2
+    margin-top: 0px
+    margin-bottom: 30px
+  & input, textarea
+    padding: 15px 15px 15px
+    border: 1px solid $color_hover-text
+    background-color: $color_hover-text
+    border-radius: 8px
+    resize: none
+    transition: $trans
+    &:hover
+      box-shadow: 0 0 40px rgba(101, 97, 97, 0.2) inset
+      transition: $trans
+    &:focus
+      box-shadow: 0 0 40px rgba(101, 97, 97, 0.1) inset
+      transition: $trans
+    &::placeholder
+      @include text-normal (1rem, 1.625rem)
+      color: $color_gray-text
+  & input:not(:last-of-type)
+    margin-bottom: 15px
+  & input:last-of-type, textarea
+    margin-bottom: 30px
+  &-text
+    @include h3-label-caps
+    color: $color_gray-text
+    letter-spacing: 1px
+    text-transform: uppercase
+  & button
+    padding: 18px 0
+    border-radius: 12px
+    background-color: $color_active-regular
+    box-shadow: 0px 0px 20px rgba(36, 163, 255, 0.5)
+    color: $color_hover-text
+    border-color: transparent
+    @include text-bold (1rem, 1.25rem)
+    transition: $trans
+    &:hover
+      @include btn-hover-trans
+
+
 
 .footer
   background-color: $color_gray-bg
