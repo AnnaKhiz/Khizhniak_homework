@@ -19,6 +19,16 @@ html, body
   padding: 0 15px
   margin: 0 auto
 
+.container-1390
+  max-width: 1390px
+  padding: 0 15px
+  margin: 0 auto
+
+.container-1920
+  max-width: 1630px
+  padding: 0 15px
+  margin: 0 auto
+
 .header
   display: flex
   justify-content: space-between
@@ -100,21 +110,22 @@ html, body
     flex-wrap: wrap
     justify-content: space-between
     row-gap: 60px
+    column-gap: 60px
   &__flex-item
-    width: 33.333%
+    width: 30.333%
   &__label
     @include h1-label-pink
-    max-width: 1080px
+    max-width: 1360px
     overflow: hidden
     text-align: left
     margin: 60px auto
   &__flex-item
-    max-width: 400px
+    max-width: 493.33px
   &__flex-img
-    max-width: 400px
+    max-width: 493.33px
     height: auto
     margin-bottom: 15px
-    & img
+    & picture
       width: 100%
       object-fit: cover
   &__flex-sub
@@ -141,14 +152,14 @@ html, body
   column-gap: 60px
   padding: 60px 0
   &__info
-    max-width: 620px
+    max-width: 900px
     overflow: hidden
     &-name
       @include h1-label-pink
       margin-top: 0px
       margin-bottom: 15px
     &-contacts:after
-      @include gray-line (620px)
+      @include gray-line (900px)
     &-contacts ul
       display: flex
       align-items: center
@@ -192,7 +203,7 @@ html, body
     height: 2px
     margin: 0px auto 30px auto
     background-color: $color_gray-separator
-    max-width: 1350px
+    max-width: 1600px
     padding: 0 15px
   &__flex
     display: flex
