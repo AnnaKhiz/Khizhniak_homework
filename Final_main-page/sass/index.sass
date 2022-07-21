@@ -167,9 +167,10 @@ html, body
     color: $color_hover-text
     max-height: 90px
 .main__services
-  padding-bottom: 60px
+  margin-bottom: 48px
   &-container
     display: flex
+    justify-content: space-around
     flex-wrap: wrap
     row-gap: 60px
     column-gap: 60px
@@ -204,6 +205,49 @@ html, body
   &-desc
     @include paragraph-text-white
     overflow: hidden
+.main__quote
+  padding-top: 80px
+  background-color: $color_hover-text
+  &-container
+    display: flex
+
+.additional
+  &-round-corner
+    position: relative
+    display: block
+    &:after
+      content: ''
+      position: absolute
+      top: 0
+      left: 0
+      height: 12px
+      background: linear-gradient(253deg, #323264 5.93%, #323264 29.17%, #643E72 81.46%)
+      border-radius: 0 0 12px 12px
+      width: 100%
+  &-line-1
+    position: relative
+    display: block
+    &:after
+      content: ''
+      position: absolute
+      top: 12px
+      left: 20px
+      right: 20px
+      height: 10px
+      background-color: $color_gray-line
+      border-radius: 0px 0px 12px 12px
+  &-line-2
+    position: relative
+    display: block
+    &:after
+      content: ''
+      position: absolute
+      top: 22px
+      left: 40px
+      height: 10px
+      right: 40px
+      background-color: $color_gray-separator
+      border-radius: 0px 0px 12px 12px
 .footer
   background-color: $color_gray-bg
   padding: 0px 0px 30px 0px
