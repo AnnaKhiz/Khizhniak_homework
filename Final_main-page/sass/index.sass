@@ -30,6 +30,11 @@ html, body
   padding: 0 15px
   margin: 0 auto
 
+.container-clients-gallery
+  max-width: 1750px
+  padding: 0 15px
+  margin: 0 auto
+
 .header
   background-color: $color_main-blue
   &-flex
@@ -219,6 +224,9 @@ html, body
     color: $color_active-regular
     margin-bottom: 5px
     display: block
+    transition: $trans
+    &:hover
+      @include link-hover-trans
   &-text
     @include h1-label-pink
     margin-bottom: 30px
@@ -235,6 +243,87 @@ html, body
     color: $color_gray-text
     max-width: 1140px
     overflow: hidden
+.main__clients-gallery
+  padding-top: 30px
+  background-color: $color_hover-text
+  padding-bottom: 60px
+  &-label
+    @include h3-label-caps
+    color: $color_main-blue
+    margin-bottom: 30px
+    text-align: center
+    margin-top: 0
+  &-container
+    display: flex
+    flex-wrap: wrap
+    border-radius: 12px
+  &-item
+    width: 25%
+    height: 120px
+    display: flex
+    justify-content: center
+    align-items: center
+  & .color-1
+    @include color-block (#1C4280)
+  & .color-2
+    @include color-block (#143646)
+  & .color-3
+    @include color-block (#F48B30)
+  & .color-4
+    @include color-block (#9E4DC3)
+  & .color-5
+    @include color-block (#FD9339)
+  & .color-6
+    @include color-block (#E2E2E4)
+  & .color-7
+    @include color-block (#C71C36)
+  & .color-8
+    @include color-block (#DCF3F9)
+  & .color-9
+    @include color-block (#EAEAEA)
+  & .color-10
+    @include color-block (#282240)
+  & .color-11
+    @include color-block (#1D4568)
+  & .color-12
+    @include color-block (#000000)
+
+.main__publications
+  padding-top: 30px
+  background-color: $color_gray-bg
+  &-link
+    @include h3-label-caps
+    color: $color_active-regular
+    margin-bottom: 10px
+    display: block
+    transition: $trans
+    &:hover
+      @include link-hover-trans
+  &-label
+    @include h1-label-pink
+    margin-bottom: 30px
+    margin-top: 0
+  &-container
+    display: flex
+    justify-content: space-between
+    column-gap: 30px
+  &-item
+    width: 33.333%
+    & img
+      margin-bottom: 30px
+  &-text
+    @include text-bold (1rem, 1.25rem)
+    color: $color_active-regular
+    margin-bottom: 15px
+  &-date
+    @include text-bold (0.75rem, 0.9375rem)
+    color: $color_gray-text
+    text-transform: uppercase
+    letter-spacing: 1px
+    margin-bottom: 15px
+  &-desc
+    @include text-normal (0.875rem, 1.375rem)
+    color: $color_block-text
 .pad
   width: 1200px
   padding-left: 30px
@@ -284,7 +373,7 @@ div.swiper-horizontal>.swiper-pagination-bullets,
       top: 0
       left: 0
       height: 12px
-      background: linear-gradient(253deg, #323264 5.93%, #323264 29.17%, #643E72 81.46%)
+      background: linear-gradient(305deg, #323264 62.93%, #323264 34.17%, #643E72 118.46%)
       border-radius: 0 0 12px 12px
       width: 100%
   &-line-1

@@ -104,6 +104,12 @@ html, body {
   margin: 0 auto;
 }
 
+.container-clients-gallery {
+  max-width: 1750px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
 .header {
   background-color: #323264;
 }
@@ -396,6 +402,11 @@ html, body {
   color: #24A3FF;
   margin-bottom: 5px;
   display: block;
+  transition: all ease-in-out 0.3s;
+}
+.main__quote-link:hover {
+  color: #F0145A;
+  transition: all ease-in-out 0.3s;
 }
 .main__quote-text {
   font: normal 700 2.375rem/2.875rem "Montserrat";
@@ -424,6 +435,115 @@ html, body {
   color: #B3B3BA;
   max-width: 1140px;
   overflow: hidden;
+}
+
+.main__clients-gallery {
+  padding-top: 30px;
+  background-color: #ffffff;
+  padding-bottom: 60px;
+}
+.main__clients-gallery-label {
+  font: normal 700 0.875rem/1.0625rem "Montserrat";
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #323264;
+  margin-bottom: 30px;
+  text-align: center;
+  margin-top: 0;
+}
+.main__clients-gallery-container {
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 12px;
+}
+.main__clients-gallery-item {
+  width: 25%;
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main__clients-gallery .color-1 {
+  background-color: #1C4280;
+}
+.main__clients-gallery .color-2 {
+  background-color: #143646;
+}
+.main__clients-gallery .color-3 {
+  background-color: #F48B30;
+}
+.main__clients-gallery .color-4 {
+  background-color: #9E4DC3;
+}
+.main__clients-gallery .color-5 {
+  background-color: #FD9339;
+}
+.main__clients-gallery .color-6 {
+  background-color: #E2E2E4;
+}
+.main__clients-gallery .color-7 {
+  background-color: #C71C36;
+}
+.main__clients-gallery .color-8 {
+  background-color: #DCF3F9;
+}
+.main__clients-gallery .color-9 {
+  background-color: #EAEAEA;
+}
+.main__clients-gallery .color-10 {
+  background-color: #282240;
+}
+.main__clients-gallery .color-11 {
+  background-color: #1D4568;
+}
+.main__clients-gallery .color-12 {
+  background-color: #000000;
+}
+
+.main__publications {
+  padding-top: 30px;
+  background-color: #F5F5FA;
+}
+.main__publications-link {
+  font: normal 700 0.875rem/1.0625rem "Montserrat";
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #24A3FF;
+  margin-bottom: 10px;
+  display: block;
+  transition: all ease-in-out 0.3s;
+}
+.main__publications-link:hover {
+  color: #F0145A;
+  transition: all ease-in-out 0.3s;
+}
+.main__publications-label {
+  font: normal 700 2.375rem/2.875rem "Montserrat";
+  background: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  margin-bottom: 30px;
+  margin-top: 0;
+}
+.main__publications-container {
+  display: flex;
+  justify-content: space-between;
+  column-gap: 30px;
+}
+.main__publications-item {
+  width: 33.333%;
+}
+.main__publications-item img {
+  margin-bottom: 30px;
+}
+.main__publications-text {
+  font: 700 1rem "Montserrat";
+  line-height: 1.25rem;
+  font-style: normal;
+  color: #24A3FF;
+  margin-bottom: 15px;
 }
 
 .pad {
@@ -488,7 +608,7 @@ div.swiper-horizontal > .swiper-pagination-bullets,
   top: 0;
   left: 0;
   height: 12px;
-  background: linear-gradient(253deg, #323264 5.93%, #323264 29.17%, #643E72 81.46%);
+  background: linear-gradient(305deg, #323264 62.93%, #323264 34.17%, #643E72 118.46%);
   border-radius: 0 0 12px 12px;
   width: 100%;
 }
