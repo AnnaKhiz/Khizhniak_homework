@@ -8,7 +8,7 @@
   border: 1px solid green
 html, body
   height: 100%
-  position: relative !important
+  position: relative
 
 .container
   max-width: 1350px
@@ -19,6 +19,7 @@ html, body
   max-width: 1630px
   padding: 0 15px
   margin: 0 auto
+
 .container-about
   max-width: 1110px
   padding: 0 15px
@@ -210,7 +211,69 @@ html, body
   background-color: $color_hover-text
   &-container
     display: flex
-
+    background-color: $color_gray-bg
+    border-radius: 12px
+    margin-bottom: 30px
+  &-link
+    @include h3-label-caps
+    color: $color_active-regular
+    margin-bottom: 5px
+    display: block
+  &-text
+    @include h1-label-pink
+    margin-bottom: 30px
+    max-width: 1140px
+    overflow: hidden
+  &-name
+    @include text-bold (1rem, 1.25rem)
+    color: $color_gray-text
+    max-width: 1140px
+    overflow: hidden
+    margin-bottom: 6px
+  &-post
+    @include text-normal (0.875rem, 1.375rem)
+    color: $color_gray-text
+    max-width: 1140px
+    overflow: hidden
+.pad
+  width: 1200px
+  padding-left: 30px
+  padding-top: 30px
+  padding-bottom: 30px
+.swiper
+  width: 100%
+  height: 100%
+  &-wrapper
+    margin-bottom: 50px
+.swiper-slide
+  text-align: left
+  font-size: 18px
+  background: $color_hover-text
+  display: -webkit-box
+  display: -ms-flexbox
+  display: -webkit-flex
+  display: flex
+  -webkit-box-pack: flex-start
+  -ms-flex-pack: flex-start
+  -webkit-justify-content: flex-start
+  justify-content: flex-start
+  -webkit-box-align: center
+  -ms-flex-align: center
+  -webkit-align-items: center
+  align-items: center
+.swiper-slide picture
+  display: block
+  width: 100%
+  height: 100%
+  object-fit: cover
+span.swiper-pagination-bullet
+  width: var(--swiper-pagination-bullet-width,var(--swiper-pagination-bullet-size,16px))
+  height: var(--swiper-pagination-bullet-height,var(--swiper-pagination-bullet-size,16px))
+  background-color: var(--swiper-pagination-bullet-inactive-color,$color_active-regular)
+div.swiper-horizontal>.swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal,
+.swiper-pagination-custom, .swiper-pagination-fraction
+  bottom: 30px
 .additional
   &-round-corner
     position: relative
@@ -248,6 +311,7 @@ html, body
       right: 40px
       background-color: $color_gray-separator
       border-radius: 0px 0px 12px 12px
+
 .footer
   background-color: $color_gray-bg
   padding: 0px 0px 30px 0px

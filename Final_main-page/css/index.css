@@ -77,7 +77,7 @@ input {
 
 html, body {
   height: 100%;
-  position: relative !important;
+  position: relative;
 }
 
 .container {
@@ -385,6 +385,97 @@ html, body {
 }
 .main__quote-container {
   display: flex;
+  background-color: #F5F5FA;
+  border-radius: 12px;
+  margin-bottom: 30px;
+}
+.main__quote-link {
+  font: normal 700 0.875rem/1.0625rem "Montserrat";
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #24A3FF;
+  margin-bottom: 5px;
+  display: block;
+}
+.main__quote-text {
+  font: normal 700 2.375rem/2.875rem "Montserrat";
+  background: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  margin-bottom: 30px;
+  max-width: 1140px;
+  overflow: hidden;
+}
+.main__quote-name {
+  font: 700 1rem "Montserrat";
+  line-height: 1.25rem;
+  font-style: normal;
+  color: #B3B3BA;
+  max-width: 1140px;
+  overflow: hidden;
+  margin-bottom: 6px;
+}
+.main__quote-post {
+  font: 400 0.875rem "Montserrat";
+  line-height: 1.375rem;
+  font-style: normal;
+  color: #B3B3BA;
+  max-width: 1140px;
+  overflow: hidden;
+}
+
+.pad {
+  width: 1200px;
+  padding-left: 30px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+.swiper-wrapper {
+  margin-bottom: 50px;
+}
+
+.swiper-slide {
+  text-align: left;
+  font-size: 18px;
+  background: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: flex-start;
+  -ms-flex-pack: flex-start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.swiper-slide picture {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+span.swiper-pagination-bullet {
+  width: var(--swiper-pagination-bullet-width, var(--swiper-pagination-bullet-size, 16px));
+  height: var(--swiper-pagination-bullet-height, var(--swiper-pagination-bullet-size, 16px));
+  background-color: var(--swiper-pagination-bullet-inactive-color, #24A3FF);
+}
+
+div.swiper-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal,
+.swiper-pagination-custom, .swiper-pagination-fraction {
+  bottom: 30px;
 }
 
 .additional-round-corner {
