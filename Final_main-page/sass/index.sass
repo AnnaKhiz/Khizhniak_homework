@@ -19,7 +19,6 @@ html, body
   max-width: 1630px
   padding: 0 15px
   margin: 0 auto
-
 .container-about
   max-width: 1110px
   padding: 0 15px
@@ -29,11 +28,11 @@ html, body
   max-width: 1390px
   padding: 0 15px
   margin: 0 auto
-
 .container-clients-gallery
   max-width: 1750px
   padding: 0 15px
   margin: 0 auto
+
 
 .header
   background-color: $color_main-blue
@@ -43,7 +42,9 @@ html, body
     align-items: center
     padding-top: 50px
     padding-bottom: 30px
-
+  &__logo-img:hover
+    filter: drop-shadow(1px 1px 5px $color_block-text)
+    transition: $trans
   &__logo-item-1
     display: flex
     align-items: center
@@ -204,16 +205,24 @@ html, body
       top: 14px
       left: 14px
   &-text
-    @include text-bold (1.375rem, 1.6875rem)
-    color: $color_active-regular
     overflow: hidden
     height: 55px
+
+    & a
+      @include text-bold (1.375rem, 1.6875rem)
+      color: $color_active-regular
+      transition: $trans
+      vertical-align: middle
+      &:hover
+        @include link-hover-trans
   &-desc
     @include paragraph-text-white
     overflow: hidden
 .main__quote
   padding-top: 80px
   background-color: $color_hover-text
+  &-item
+    max-width: 1200px
   &-container
     display: flex
     background-color: $color_gray-bg
@@ -257,20 +266,16 @@ html, body
     display: flex
     flex-wrap: wrap
     border-radius: 12px
-  &-item
-    width: 25%
-    height: 120px
-    display: flex
-    justify-content: center
-    align-items: center
   & .color-1
     @include color-block (#1C4280)
+    border-radius: 12px 0 0 0
   & .color-2
     @include color-block (#143646)
   & .color-3
     @include color-block (#F48B30)
   & .color-4
     @include color-block (#9E4DC3)
+    border-radius: 0 12px 0 0
   & .color-5
     @include color-block (#FD9339)
   & .color-6
@@ -281,16 +286,34 @@ html, body
     @include color-block (#DCF3F9)
   & .color-9
     @include color-block (#EAEAEA)
+    border-radius: 0 0 0 12px
   & .color-10
     @include color-block (#282240)
   & .color-11
     @include color-block (#1D4568)
   & .color-12
     @include color-block (#000000)
+    border-radius: 0 0 12px 0
+  &-item
+    width: 25%
+    height: 120px
+    display: flex
+    justify-content: center
+    align-items: center
+    transition: $trans
+    &:hover
+      transform: scale(1.03)
+      box-shadow: 2px 2px 5px 2px $color_main-soft, inset 2px 2px 5px 2px $color_main-soft
+      transition: $trans
+      border-radius: 50%
+
 
 .main__publications
   padding-top: 30px
+  padding-bottom: 30px
   background-color: $color_gray-bg
+  &-subitem
+    padding: 30px
   &-link
     @include h3-label-caps
     color: $color_active-regular
@@ -308,27 +331,37 @@ html, body
     justify-content: space-between
     column-gap: 30px
   &-item
-    width: 33.333%
+    width: 31.333%
+    background-color: $color_hover-text
+    border-radius: 8px
     & img
-      margin-bottom: 30px
+      display: block
+      width: 100%
+      height: auto
+      object-fit: cover
   &-text
-    @include text-bold (1rem, 1.25rem)
-    color: $color_active-regular
     margin-bottom: 15px
+    height: 40px
+    overflow: hidden
+    & a
+      @include text-bold (1rem, 1.25rem)
+      color: $color_active-regular
+      transition: $trans
+      &:hover
+        @include link-hover-trans
   &-date
     @include text-bold (0.75rem, 0.9375rem)
     color: $color_gray-text
     text-transform: uppercase
     letter-spacing: 1px
-    margin-bottom: 15px
+    &:after
+      @include gray-line-public (453.33px)
   &-desc
     @include text-normal (0.875rem, 1.375rem)
     color: $color_block-text
 .pad
-  width: 1200px
-  padding-left: 30px
-  padding-top: 30px
-  padding-bottom: 30px
+  width: 100%
+  padding: 30px
 .swiper
   width: 100%
   height: 100%
@@ -336,7 +369,6 @@ html, body
     margin-bottom: 50px
 .swiper-slide
   text-align: left
-  font-size: 18px
   background: $color_hover-text
   display: -webkit-box
   display: -ms-flexbox

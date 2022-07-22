@@ -120,6 +120,10 @@ html, body {
   padding-top: 50px;
   padding-bottom: 30px;
 }
+.header__logo-img:hover {
+  filter: drop-shadow(1px 1px 5px #000000);
+  transition: all ease-in-out 0.3s;
+}
 .header__logo-item-1 {
   display: flex;
   align-items: center;
@@ -372,12 +376,20 @@ html, body {
   left: 14px;
 }
 .main__services-text {
+  overflow: hidden;
+  height: 55px;
+}
+.main__services-text a {
   font: 700 1.375rem "Montserrat";
   line-height: 1.6875rem;
   font-style: normal;
   color: #24A3FF;
-  overflow: hidden;
-  height: 55px;
+  transition: all ease-in-out 0.3s;
+  vertical-align: middle;
+}
+.main__services-text a:hover {
+  color: #F0145A;
+  transition: all ease-in-out 0.3s;
 }
 .main__services-desc {
   font: normal 400 1rem/1.625rem "Montserrat";
@@ -388,6 +400,9 @@ html, body {
 .main__quote {
   padding-top: 80px;
   background-color: #ffffff;
+}
+.main__quote-item {
+  max-width: 1200px;
 }
 .main__quote-container {
   display: flex;
@@ -456,15 +471,9 @@ html, body {
   flex-wrap: wrap;
   border-radius: 12px;
 }
-.main__clients-gallery-item {
-  width: 25%;
-  height: 120px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 .main__clients-gallery .color-1 {
   background-color: #1C4280;
+  border-radius: 12px 0 0 0;
 }
 .main__clients-gallery .color-2 {
   background-color: #143646;
@@ -474,6 +483,7 @@ html, body {
 }
 .main__clients-gallery .color-4 {
   background-color: #9E4DC3;
+  border-radius: 0 12px 0 0;
 }
 .main__clients-gallery .color-5 {
   background-color: #FD9339;
@@ -489,6 +499,7 @@ html, body {
 }
 .main__clients-gallery .color-9 {
   background-color: #EAEAEA;
+  border-radius: 0 0 0 12px;
 }
 .main__clients-gallery .color-10 {
   background-color: #282240;
@@ -498,11 +509,30 @@ html, body {
 }
 .main__clients-gallery .color-12 {
   background-color: #000000;
+  border-radius: 0 0 12px 0;
+}
+.main__clients-gallery-item {
+  width: 25%;
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all ease-in-out 0.3s;
+}
+.main__clients-gallery-item:hover {
+  transform: scale(1.03);
+  box-shadow: 2px 2px 5px 2px #686887, inset 2px 2px 5px 2px #686887;
+  transition: all ease-in-out 0.3s;
+  border-radius: 50%;
 }
 
 .main__publications {
   padding-top: 30px;
+  padding-bottom: 30px;
   background-color: #F5F5FA;
+}
+.main__publications-subitem {
+  padding: 30px;
 }
 .main__publications-link {
   font: normal 700 0.875rem/1.0625rem "Montserrat";
@@ -533,24 +563,58 @@ html, body {
   column-gap: 30px;
 }
 .main__publications-item {
-  width: 33.333%;
+  width: 31.333%;
+  background-color: #ffffff;
+  border-radius: 8px;
 }
 .main__publications-item img {
-  margin-bottom: 30px;
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
 }
 .main__publications-text {
+  margin-bottom: 15px;
+  height: 40px;
+  overflow: hidden;
+}
+.main__publications-text a {
   font: 700 1rem "Montserrat";
   line-height: 1.25rem;
   font-style: normal;
   color: #24A3FF;
-  margin-bottom: 15px;
+  transition: all ease-in-out 0.3s;
+}
+.main__publications-text a:hover {
+  color: #F0145A;
+  transition: all ease-in-out 0.3s;
+}
+.main__publications-date {
+  font: 700 0.75rem "Montserrat";
+  line-height: 0.9375rem;
+  font-style: normal;
+  color: #B3B3BA;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.main__publications-date:after {
+  content: "";
+  display: block;
+  height: 4px;
+  width: 453.33px;
+  background-color: #E6E6F0;
+  margin: 15px 0;
+}
+.main__publications-desc {
+  font: 400 0.875rem "Montserrat";
+  line-height: 1.375rem;
+  font-style: normal;
+  color: #000000;
 }
 
 .pad {
-  width: 1200px;
-  padding-left: 30px;
-  padding-top: 30px;
-  padding-bottom: 30px;
+  width: 100%;
+  padding: 30px;
 }
 
 .swiper {
@@ -563,7 +627,6 @@ html, body {
 
 .swiper-slide {
   text-align: left;
-  font-size: 18px;
   background: #ffffff;
   display: -webkit-box;
   display: -ms-flexbox;
