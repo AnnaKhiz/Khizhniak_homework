@@ -35,6 +35,9 @@ html, body
   align-items: center
   padding-top: 50px
   padding-bottom: 30px
+  &__logo-img:hover
+    filter: drop-shadow(1px 1px 5px $color_gray-bgAlt)
+    transition: $trans
   &__logo-item-1
     display: flex
     align-items: center
@@ -239,8 +242,8 @@ div.swiper-horizontal>.swiper-pagination-bullets,
   &__info-contacts ul
     display: flex
     align-items: center
-    & li:not(:last-of-type):after
-      @include menu-dots-team //съехала точка. почему?
+    & li:not(:first-of-type):before
+      @include menu-dots-team
     & li:nth-of-type(2) a
       @include text-bold (1rem, 1.25rem)
       color: $color_main-alt

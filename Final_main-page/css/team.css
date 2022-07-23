@@ -10,6 +10,12 @@
   font-style: normal;
   font-weight: 700;
 }
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
 *, *:before, *:after {
   box-sizing: border-box;
 }
@@ -109,6 +115,10 @@ html, body {
   align-items: center;
   padding-top: 50px;
   padding-bottom: 30px;
+}
+.header__logo-img:hover {
+  filter: drop-shadow(1px 1px 5px #EDEDF7);
+  transition: all ease-in-out 0.3s;
 }
 .header__logo-item-1 {
   display: flex;
@@ -425,7 +435,7 @@ html, body {
   display: flex;
   align-items: center;
 }
-.footer__info-contacts ul li:not(:last-of-type):after {
+.footer__info-contacts ul li:not(:first-of-type):before {
   content: "";
   display: inline-block;
   width: 6px;
