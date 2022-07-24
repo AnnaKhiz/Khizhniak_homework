@@ -399,6 +399,11 @@ html, body {
     left: 249%;
   }
 }
+@media screen and (max-width: 320px) {
+  .header__info-contacts-list li.position-375 {
+    left: 198%;
+  }
+}
 .header__info-contacts-sublist {
   display: flex;
 }
@@ -514,6 +519,18 @@ ul.nav-pills .nav-link.active:focus, .nav-pills .show > .nav-link:focus {
   }
 }
 
+@media screen and (max-width: 768px) {
+  body .d-flex {
+    display: block !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body .flex-column {
+    flex-direction: row !important;
+  }
+}
+
 .main {
   background: linear-gradient(228.57deg, #323264 11.93%, #323264 57.17%, #643E72 87.46%);
   min-height: 1000px;
@@ -544,7 +561,7 @@ ul.nav-pills .nav-link.active:focus, .nav-pills .show > .nav-link:focus {
   top: calc(50% + 23px);
   z-index: 2;
 }
-@media screen and (max-width: 10248px) {
+@media screen and (max-width: 1024px) {
   .main__letter-label {
     top: calc(54% + 23px);
   }

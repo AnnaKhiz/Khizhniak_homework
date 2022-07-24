@@ -214,6 +214,8 @@ html, body
             position: absolute
             top: 2%
             left: 249%
+          @media screen and (max-width: 320px)
+            left: 198%
       &-sublist
         display: flex
         & li a
@@ -269,6 +271,12 @@ ul.nav-pills .nav-link.active, .nav-pills .show>.nav-link
     @media screen and (max-width: 375px)
       @include h1-label-pink
       font: normal 700 1.875rem/3.3125rem "Montserrat"
+body .d-flex
+  @media screen and (max-width: 768px)
+    display: block!important
+body .flex-column
+  @media screen and (max-width: 768px)
+    flex-direction: row!important
 .main
   background: $color_gradient-superSoft
   min-height: 1000px
@@ -290,7 +298,7 @@ ul.nav-pills .nav-link.active, .nav-pills .show>.nav-link
     left: calc(50% - 800px/2)
     top: calc(50% + 46px/2)
     z-index: 2
-    @media screen and (max-width: 10248px)
+    @media screen and (max-width: 1024px)
       top: calc(54% + 23px)
     @media screen and (max-width: 768px)
       width: 560px
