@@ -320,32 +320,17 @@ body .me-3 {
   margin: 22px 0;
 }
 
-.menu__btn {
-  background-color: transparent;
-  display: flex;
-  align-items: center;
+.menu__btn svg {
+  stroke: #ffffff;
+  fill: none;
+  z-index: 3;
   position: absolute;
   left: 85%;
-  top: 9.5%;
-  width: 32px;
-  height: 32px;
-  cursor: pointer;
-  z-index: 3;
+  top: 7.5%;
 }
-.menu__btn > span, .menu__btn > span::before, .menu__btn > span::after {
-  display: block;
-  position: absolute;
-  width: 100%;
-  height: 3px;
-  background-color: #000000;
-}
-.menu__btn > span::before {
-  content: "";
-  top: -10px;
-}
-.menu__btn > span::after {
-  content: "";
-  top: 10px;
+.menu__btn svg:hover {
+  fill: #E6E6F0;
+  border-radius: 8px;
 }
 
 .header {

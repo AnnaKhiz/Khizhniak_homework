@@ -147,29 +147,17 @@ body .nav
       display: block
     & li
       margin: 22px 0
-.menu__btn
-  background-color: transparent
-  display: flex
-  align-items: center
-  position: absolute
-  left: 85%
-  top: 9.5%
-  width: 32px
-  height: 32px
-  cursor: pointer
-  z-index: 3
-  &  > span, & > span::before, & > span::after
-    display: block
+.menu__btn svg
+    stroke: $color_hover-text
+    fill: none
+    z-index: 3
     position: absolute
-    width: 100%
-    height: 3px
-    background-color: #000000
-  & > span::before
-    content: ''
-    top: -10px
-  & > span::after
-    content: ''
-    top: 10px
+    left: 85%
+    top: 7.5%
+    &:hover
+      fill: $color_gray-separator
+      border-radius: 8px
+
 
 
 
