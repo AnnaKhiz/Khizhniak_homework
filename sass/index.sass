@@ -47,7 +47,6 @@ html, body
   @media screen and (max-width: 768px)
     max-width: 100%
     padding: 0
-
 .fixed
   overflow: hidden
   width: 100%
@@ -55,6 +54,43 @@ html, body
   overflow: auto
 #menu__toggle
   opacity: 0
+.picture
+  display: block
+  font-size: 0
+ul.nav-pills .nav-link.active, .nav-pills .show>.nav-link
+  @include h1-label-pink
+  background-color: transparent
+  @media screen and (max-width: 375px)
+    font: normal 700 1.875rem/3.3125rem "Montserrat"
+  &:focus
+    @include h1-label-pink
+    @media screen and (max-width: 375px)
+      @include h1-label-pink
+      font: normal 700 1.875rem/3.3125rem "Montserrat"
+body .d-flex
+  @media screen and (max-width: 768px)
+    display: block!important
+body .flex-column
+  @media screen and (max-width: 768px)
+    flex-direction: row!important
+body .me-3
+  margin-right: 0px!important
+body .nav-link
+  @media screen and (max-width: 768px)
+    padding: 0 1rem
+body .nav
+  @media screen and (max-width: 768px)
+    padding-left: 18px
+  @media screen and (max-width: 375px)
+    margin-left: -18px
+    padding-left: 0px
+.tab-content
+  flex-direction: column
+  display: flex
+  justify-content: center
+.pad
+  width: 100%
+  padding: 30px 45px 15px 30px
 .burger
   z-index: 3
   width: 100%
@@ -135,9 +171,8 @@ html, body
     content: ''
     top: 10px
 
-.picture
-  display: block
-  font-size: 0
+
+
 .header
   background-color: $color_main-blue
   @media screen and (max-width: 375px)
@@ -268,38 +303,6 @@ html, body
           border-bottom: 2px solid $color_accent-pink
           padding-bottom: 3px
 
-
-ul.nav-pills .nav-link.active, .nav-pills .show>.nav-link
-  @include h1-label-pink
-  background-color: transparent
-  @media screen and (max-width: 375px)
-    font: normal 700 1.875rem/3.3125rem "Montserrat"
-  &:focus
-    @include h1-label-pink
-    @media screen and (max-width: 375px)
-      @include h1-label-pink
-      font: normal 700 1.875rem/3.3125rem "Montserrat"
-body .d-flex
-  @media screen and (max-width: 768px)
-    display: block!important
-body .flex-column
-  @media screen and (max-width: 768px)
-    flex-direction: row!important
-body .me-3
-  margin-right: 0px!important
-body .nav-link
-  @media screen and (max-width: 768px)
-    padding: 0 1rem
-body .nav
-  @media screen and (max-width: 768px)
-    padding-left: 18px
-  @media screen and (max-width: 375px)
-    margin-left: -18px
-    padding-left: 0px
-.tab-content
-  flex-direction: column
-  display: flex
-  justify-content: center
 .main
   background: $color_gradient-superSoft
   min-height: 1000px
@@ -691,9 +694,6 @@ body .nav
   &-desc
     @include text-normal (0.875rem, 1.375rem)
     color: $color_block-text
-.pad
-  width: 100%
-  padding: 30px 45px 15px 30px
 .swiper
   width: 100%
   height: 100%
@@ -742,7 +742,7 @@ div.swiper-horizontal>.swiper-pagination-bullets,
       top: 0
       left: 0
       height: 12px
-      background: linear-gradient(305deg, #323264 62.93%, #323264 34.17%, #643E72 118.46%)
+      background: linear-gradient(302deg, #323264 62.93%, #323264 38.17%, #643E72 132.46%)
       border-radius: 0 0 12px 12px
       width: 100%
   &-line-1
