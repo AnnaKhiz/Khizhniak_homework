@@ -1,9 +1,5 @@
 @import 'variables'
 
-@mixin container-768
-  max-width: 678px
-  padding: 0 15px
-  margin: 0 auto
 
 //labels
 @mixin h1-label-pink
@@ -123,6 +119,14 @@
   margin-right: 10px
   vertical-align: middle
 
+@mixin no-dots
+  content: ''
+  display: none
+  width: 0px
+  height: 0px
+  border-radius: 0
+  background-color: transparent
+
 @mixin gray-line ($w)
   content: ''
   display: block
@@ -130,6 +134,15 @@
   width: $w
   background-color: $color_gray-separator
   margin: 30px 0
+
+@mixin gray-line-ad ($w)
+  content: ''
+  display: block
+  height: 4px
+  width: $w
+  background: rgba(255, 255, 255, 0.3)
+  margin: 0 0 30px 0
+
 
 @mixin gray-line-public ($w)
   content: ''
@@ -149,3 +162,9 @@
 
 @mixin color-block ($color)
   background-color: $color
+
+@mixin media-max ($mx-w)
+  @media screen and (max-width: $mx-w)
+
+@mixin media-min ($mn-w)
+  @media screen and (max-width: $mn-w)

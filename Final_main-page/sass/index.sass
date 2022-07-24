@@ -19,6 +19,10 @@ html, body
   max-width: 1630px
   padding: 0 15px
   margin: 0 auto
+  @media screen and (max-width: 768px)
+    max-width: 678px
+  @media screen and (max-width: 375px)
+    max-width: 405px
 .container-about
   max-width: 1110px
   padding: 0 15px
@@ -36,10 +40,107 @@ html, body
     max-width: 100%
     padding: 0
 
+.fixed
+  overflow: hidden
+  width: 100%
+.scroll
+  overflow: auto
+#menu__toggle
+  opacity: 0
+.burger
+  z-index: 3
+  width: 100%
+  position: fixed
+  background-color: $color_main-blue
+  top: 110%
+  left: 0
+  bottom: 0
+  right: 0
+  &-btn
+    display: none
+    @media screen and (max-width: 375px)
+      display: block
+  &__navigation
+    position: relative
+  &__container
+    max-height: 80vh
+    max-width: calc(100% - 5%)
+    width: 100%
+    opacity: 0
+    pointer-events: none
+    position: fixed
+    left: 2%
+    top: 15%
+    overflow: hidden
+    background-color: $color_hover-text
+    padding: 64px 12px
+    border-radius: 12px
+    &-closeLink
+      position: absolute
+      top: 3%
+      right: 3%
+  &.show .burger__container
+    opacity: 1
+    pointer-events: initial
+  &__item a
+    @include text-bold (1.5rem, 1.8125rem)
+    text-align: center
+    display: block
+    padding: 7px 0
+    color: $color_active-regular
+    background-color: $color_gray-bg
+    border-radius: 12px
+    &:active
+      background-color: $color_gray-separator
+  &__item a:hover
+    background-color: $color_gray-separator
+    color: $color_accent-pink
+  &.show
+    top: 0
+  &__list-menu
+    display: none
+    @media screen and (max-width: 375px)
+      display: block
+    & li
+      margin: 22px 0
+.menu__btn
+  background-color: transparent
+  display: flex
+  align-items: center
+  position: absolute
+  left: 85%
+  top: 9.5%
+  width: 32px
+  height: 32px
+  cursor: pointer
+  z-index: 3
+  &  > span, & > span::before, & > span::after
+    display: block
+    position: absolute
+    width: 100%
+    height: 3px
+    background-color: #000000
+  & > span::before
+    content: ''
+    top: -10px
+  & > span::after
+    content: ''
+    top: 10px
 
+.picture
+  display: block
+  font-size: 0
 .header
   background-color: $color_main-blue
-
+  @media screen and (max-width: 375px)
+    &:before
+      content: ''
+      height: 45px
+      position: relative
+      z-index: 2
+      display: block
+      width: 100%
+      background: rgba(245, 245, 250, 0.2)
   &-flex
     display: flex
     justify-content: space-between
@@ -48,12 +149,16 @@ html, body
     padding-bottom: 30px
     @media screen and (max-width: 768px)
       display: block
-    @media screen and (max-width: 768px)
-      @include container-768
+    @media screen and (max-width: 375px)
+      padding-top: 15px
 
   &__logo-img
     @media screen and (max-width: 768px)
-      margin-top: 105px
+      margin-top: 56px
+    @media screen and (max-width: 375px)
+      margin-top: 0px
+      position: relative
+      z-index: 2
     &:hover
       filter: drop-shadow(1px 1px 5px $color_block-text)
       transition: $trans
@@ -62,6 +167,8 @@ html, body
     align-items: center
   &__logo-item-2
     margin-bottom: 30px
+    @media screen and (max-width: 375px)
+      display: none
   &__info
     z-index: 1
     &-contacts
@@ -75,9 +182,13 @@ html, body
         align-items: center
         @media screen and (max-width: 768px)
           position: absolute
-          top: 55px
-          left: 67px
+          top: 6%
+          left: 9%
           z-index: 2
+        @media screen and (max-width: 375px)
+          top: 2%
+          left: 4%
+
         & a>svg
           fill: $color_hover-text
           transition: $trans
@@ -87,11 +198,22 @@ html, body
         & li.regular
           @include text-normal (1rem, 1.25rem)
           color: $color_hover-text
+        & li.regular, & li a>svg
+          @media screen and (max-width: 375px)
+           display: none
         & li.regular + li a
           @include text-bold (1rem, 1.25rem)
           color: $color_hover-text
         & li.dot:after
           @include menu-dots
+          @media screen and (max-width: 375px)
+            @include no-dots
+        & li.position-375
+          @media screen and (max-width: 375px)
+            width: 105px
+            position: absolute
+            top: 2%
+            left: 249%
       &-sublist
         display: flex
         & li a
@@ -110,6 +232,8 @@ html, body
           transition: $trans
         & li:nth-of-type(3):after
           @include menu-dots
+          @media screen and (max-width: 375px)
+            @include no-dots
     &-navigation-list
       display: flex
       justify-content: flex-end
@@ -117,6 +241,8 @@ html, body
         justify-content: flex-start
         position: relative
         z-index: 2
+      @media screen and (max-width: 375px)
+        display: none
       & li:not(:last-of-type)
         margin-right: 15px
       & li a
@@ -132,22 +258,29 @@ html, body
           border-bottom: 2px solid $color_accent-pink
           padding-bottom: 3px
 
+
 ul.nav-pills .nav-link.active, .nav-pills .show>.nav-link
   @include h1-label-pink
   background-color: transparent
+  @media screen and (max-width: 375px)
+    font: normal 700 1.875rem/3.3125rem "Montserrat"
   &:focus
     @include h1-label-pink
+    @media screen and (max-width: 375px)
+      @include h1-label-pink
+      font: normal 700 1.875rem/3.3125rem "Montserrat"
 .main
   background: $color_gradient-superSoft
   min-height: 1000px
   &__letter
     padding-bottom: 80px
-
   &__letter-img img
     position: absolute
     left: calc(50% - 872.34px/2 + 0.17px)
     top: 0
     bottom: 0
+    @media screen and (max-width: 375px)
+      left: 0
   &__letter-label
     @include text-bold (2.375rem, 2.875rem)
     color: $color_hover-text
@@ -157,6 +290,18 @@ ul.nav-pills .nav-link.active, .nav-pills .show>.nav-link
     left: calc(50% - 800px/2)
     top: calc(50% + 46px/2)
     z-index: 2
+    @media screen and (max-width: 10248px)
+      top: calc(54% + 23px)
+    @media screen and (max-width: 768px)
+      width: 560px
+      left: calc(50% - 560px/2)
+      top: calc(60% - 46px/2)
+    @media screen and (max-width: 375px)
+      width: 315px
+      left: calc(50% - 315px/2)
+      top: calc(50% - 138px/2)
+    @media screen and (max-width: 320px)
+      width: 300px
   &__letter a
     position: absolute
     left: 0
@@ -176,12 +321,13 @@ ul.nav-pills .nav-link.active, .nav-pills .show>.nav-link
     padding-top: 827px
     padding-bottom: 60px
     display: flex
-    flex-direction: column
     column-gap: 60px
     justify-content: space-between
     @media screen and (max-width: 768px)
       display: block
       padding-top: 727px
+    @media screen and (max-width: 375px)
+      padding-top: 363px
     &-list
       width: 474px
       text-align: right
@@ -191,16 +337,34 @@ ul.nav-pills .nav-link.active, .nav-pills .show>.nav-link
         display: flex
         flex-wrap: nowrap
         border-right: none
+      @media screen and (max-width: 768px)
+        justify-content: flex-start
+        overflow-x: scroll
+        width: 100%
+        ::-webkit-scrollbar, ::-webkit-scrollbar-thumb
+          background-color: transparent
       & li:not(:last-of-type)
         margin-bottom: 30px
+        @media screen and (max-width: 375px)
+          margin-bottom: 0
       & li a
         @include text-bold (2.375rem, 2.875rem)
         color: $color_gray-text
         transition: $trans
         width: 414px
+        @media screen and (max-width: 375px)
+          font: normal 700 1.875rem/3.3125rem "Montserrat"
+          text-align: left
+          max-width: 312px
+          padding-right: 0
+          margin: 30px 30px 30px 0
         &:hover
           @include text-bold (2.375rem, 2.875rem)
           @include link-hover-trans
+          @media screen and (max-width: 375px)
+            font: normal 700 1.875rem/3.3125rem "Montserrat"
+            margin: 30px 30px 30px 0
+
     &-desc
       display: flex
       flex-direction: column
@@ -213,7 +377,13 @@ ul.nav-pills .nav-link.active, .nav-pills .show>.nav-link
         padding-top: 0px
         max-width: 450px
       @media screen and (max-width: 768px)
+        max-width: 90%
+        margin: auto
+        &:before
+          @include gray-line-ad (100%)
+      @media screen and (max-width: 375px)
         max-width: 100%
+
   &__info-label
     @include text-bold (1.875rem, 2.3125rem)
     color: $color_hover-text
@@ -224,6 +394,8 @@ ul.nav-pills .nav-link.active, .nav-pills .show>.nav-link
     max-height: 90px
     @media screen and (max-width: 1366px)
       max-height: 180px
+    @media screen and (max-width: 375px)
+      max-height: 270px
 
 .main__services
   margin-bottom: 48px
@@ -233,13 +405,18 @@ ul.nav-pills .nav-link.active, .nav-pills .show>.nav-link
     flex-wrap: wrap
     row-gap: 60px
     column-gap: 60px
-
+    @media screen and (max-width: 375px)
+      row-gap: 0px
   &-item
     max-width: 30.333%
     @media screen and (max-width: 1366px)
       max-width: 28.333%
     @media screen and (max-width: 768px)
       max-width: 45.333%
+      margin-bottom: 30px
+    @media screen and (max-width: 375px)
+      max-width: 100%
+
   &-link
     @include h3-label-caps
     color: $color_active-regular
@@ -308,6 +485,12 @@ ul.nav-pills .nav-link.active, .nav-pills .show>.nav-link
     margin-bottom: 30px
     max-width: 1140px
     overflow: hidden
+    @media screen and (max-width: 375px)
+      font: normal 700 1.875rem/2.3125rem "Montserrat"
+    @media screen and (max-width: 320px)
+      font: normal 700 1.875rem/2.3125rem "Montserrat"
+    @media screen and (max-width: 320px)
+      font: normal 700 1.5rem/1.8rem "Montserrat"
   &-name
     @include text-bold (1rem, 1.25rem)
     color: $color_gray-text
@@ -323,12 +506,15 @@ ul.nav-pills .nav-link.active, .nav-pills .show>.nav-link
   padding-top: 30px
   background-color: $color_hover-text
   padding-bottom: 60px
+  @media screen and (max-width: 375px)
+    padding-bottom: 0px
   &-label
     @include h3-label-caps
     color: $color_main-blue
     margin-bottom: 30px
     text-align: center
     margin-top: 0
+
   &-container
     display: flex
     flex-wrap: wrap
@@ -377,11 +563,19 @@ ul.nav-pills .nav-link.active, .nav-pills .show>.nav-link
     transition: $trans
     @media screen and (max-width: 768px)
       width: 33.333%
+    @media screen and (max-width: 673px)
+      width: 100%
+      &:not(:nth-of-type(-n+6))
+        display: none
+
     &:hover
       transform: scale(1.03)
       box-shadow: 2px 2px 5px 2px $color_main-soft, inset 2px 2px 5px 2px $color_main-soft
       transition: $trans
       border-radius: 50%
+      @media screen and (max-width: 768px)
+        transform: none
+        border-radius: 0
 
 
 .main__publications
@@ -416,12 +610,18 @@ ul.nav-pills .nav-link.active, .nav-pills .show>.nav-link
     background-color: $color_hover-text
     border-radius: 8px
     @media screen and (max-width: 768px)
-      width: 47.333%
+      width: 46.333%
+    @media screen and (max-width: 673px)
+      width: 100%
     & img
       display: block
       width: 100%
       height: auto
       object-fit: cover
+  &-item.last
+    @media screen and (max-width: 768px)
+      width: 100%
+
   &-text
     margin-bottom: 15px
     height: 40px
@@ -537,12 +737,23 @@ div.swiper-horizontal>.swiper-pagination-bullets,
   &__flex
     display: flex
     justify-content: space-between
+    position: relative
+    @media screen and (max-width: 375px)
+      display: block
+      max-width: 100%
+      text-align: center
   &__info-adress ul
     display: flex
     margin-bottom: 21px
     align-items: center
+    @media screen and (max-width: 375px)
+      display: block
+      max-width: 100%
+
     & li:not(:last-of-type):after
       @include menu-dots-team
+      @media screen and (max-width: 375px)
+        @include no-dots
     & li.regular
       @include text-normal (1rem, 1.25rem)
       color: $color_gray-text
@@ -554,10 +765,21 @@ div.swiper-horizontal>.swiper-pagination-bullets,
   &__info-contacts ul
     display: flex
     align-items: center
+    @media screen and (max-width: 375px)
+      display: block
+      max-width: 100%
+      margin-bottom: 21px
+    & li
+      @media screen and (max-width: 375px)
+        margin-bottom: 10px
+
+
     & li a
       display: inline-block
     & li:not(:first-of-type):before
       @include menu-dots-team
+      @media screen and (max-width: 375px)
+        @include no-dots
     & li:nth-of-type(2) a
       @include text-bold (1rem, 1.25rem)
       color: $color_main-alt
@@ -575,6 +797,16 @@ div.swiper-horizontal>.swiper-pagination-bullets,
     & li a>svg:hover
       fill: $color_accent-pink
       transition: $trans
-  &__copyright-text
-    @include text-normal (1rem, 1.25rem)
-    color: $color_gray-text
+  &__copyright
+
+    &-text
+      @include text-normal (1rem, 1.25rem)
+      color: $color_gray-text
+      @media screen and (max-width: 768px)
+        @include text-normal (1rem, 1.25rem)
+        color: $color_gray-text
+        position: absolute
+        top: 0
+        right: 0
+      @media screen and (max-width: 375px)
+        position: static

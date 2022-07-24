@@ -1,0 +1,256 @@
+@import 'variables'
+@import 'fonts'
+@import 'mixins'
+@import 'reset'
+@import 'header'
+
+//html *
+  border: 1px solid green
+html, body
+  height: 100%
+
+.container
+  max-width: 1350px
+  padding: 0 15px
+  margin: 0 auto
+
+.container-about
+  max-width: 1110px
+  padding: 0 15px
+  margin: 0 auto
+
+.container-1390
+  max-width: 1390px
+  padding: 0 15px
+  margin: 0 auto
+
+.container-1920
+  max-width: 1630px
+  padding: 0 15px
+  margin: 0 auto
+
+.header
+  display: flex
+  justify-content: space-between
+  align-items: center
+  padding-top: 50px
+  padding-bottom: 30px
+  &__logo-img:hover
+    filter: drop-shadow(1px 1px 5px $color_gray-bgAlt)
+    transition: $trans
+  &__logo-item-1
+    display: flex
+    align-items: center
+  &__logo-text
+    @include text-normal (2.25rem, 2.75rem)
+    color: $color_main-blue
+  &__info
+    &-contacts
+      display: flex
+      flex-wrap: wrap
+      margin-bottom: 18.5px
+      &-list
+        display: flex
+        align-items: center
+        & a>svg
+          fill: $color_gray-text
+          transition: $trans
+        & a>svg:hover
+          fill: $color_accent-pink
+          transition: $trans
+        & li.regular
+          @include text-normal (1rem, 1.25rem)
+          color: $color_gray-text
+        & li.regular + li a
+          @include text-bold (1rem, 1.25rem)
+          color: $color_gray-text
+        & li.dot:after
+          @include menu-dots
+      &-sublist
+        display: flex
+        & li a
+          @include text-bold (0.75rem, 0.9375rem)
+          color: $color_gray-text
+          padding: 5px 7px
+          border-radius: 8px
+          background-color: none
+        & li:nth-of-type(3) a:link, & li:nth-of-type(3) a
+          background-color: $color_accent-pink
+          color: $color_hover-text
+          transition: $trans
+        & li a:hover
+          background-color: $color_gray-bg
+          color: $color_gray-text
+          transition: $trans
+        & li:nth-of-type(3):after
+          @include menu-dots
+    &-navigation-list
+      display: flex
+      justify-content: flex-end
+      & li:last-of-type a:link, & li:last-of-type a
+        @include link-hover-pink
+        border-bottom: 2px solid $color_accent-pink
+        padding-bottom: 3px
+      & li:not(:last-of-type)
+        margin-right: 15px
+      & li a
+        @include link-regular-blue
+        transition: $trans
+        &:hover
+          @include link-regular-blue
+          border-bottom: 2px solid $color_active-regular
+          padding-bottom: 3px
+          transition: $trans
+        &:active
+          @include link-hover-pink
+          border-bottom: 2px solid $color_accent-pink
+          padding-bottom: 3px
+
+.main
+  display: flex
+  justify-content: space-between
+  padding: 60px 0
+  &__contacts-list li:nth-of-type(1),
+  &__contacts-list li:nth-of-type(2)
+    @include text-normal (1.3125rem, 1.875rem)
+    color: $color_main-blue
+  &__contacts-list li.line:after
+      @include gray-line (650px)
+  &__contacts-list li:nth-of-type(3) a
+    @include text-normal (1.3125rem, 1.875rem)
+    color: $color_main-alt
+    margin-bottom: 15px
+  &__contacts-list li:nth-of-type(4) a
+    @include text-normal (1.3125rem, 1.875rem)
+    color: $color_active-regular
+    transition: $trans
+    &:hover
+      @include link-hover-trans
+  &__contacts-sublist
+    display: flex
+    align-items: center
+    justify-content: flex-start
+    column-gap: 10px
+    & li a>svg
+      fill: $color_active-regular
+      transition: $trans
+      &:hover
+        fill: $color_accent-pink
+        transition: $trans
+    & li:last-of-type
+      max-width: 115px
+    & li:last-of-type p
+      @include text-boldCaps-blue (0.75rem, 1rem)
+      transition: $trans
+      &:hover
+        @include link-hover-trans
+
+.main__form
+  max-width: 650px
+  width: 100%
+  input, textarea, button
+    display: block
+    width: 100%
+  & form
+
+    padding: 30px
+    background-color: $color_gray-bg
+    border-radius: 12px
+  &-label
+    @include h1-label-pink-2
+    margin-top: 0px
+    margin-bottom: 30px
+  & input, textarea
+    padding: 15px 15px 15px
+    border: 1px solid $color_hover-text
+    background-color: $color_hover-text
+    border-radius: 8px
+    resize: none
+    transition: $trans
+    &:hover
+      box-shadow: 0 0 40px rgba(101, 97, 97, 0.2) inset
+      transition: $trans
+    &:focus
+      box-shadow: 0 0 40px rgba(101, 97, 97, 0.1) inset
+      transition: $trans
+    &::placeholder
+      @include text-normal (1rem, 1.625rem)
+      color: $color_gray-text
+  & input:not(:last-of-type)
+    margin-bottom: 15px
+  & input:last-of-type, textarea
+    margin-bottom: 30px
+  &-text
+    @include h3-label-caps
+    color: $color_gray-text
+    letter-spacing: 1px
+    text-transform: uppercase
+    margin-bottom: 15px
+  & button
+    padding: 18px 0
+    border-radius: 12px
+    background-color: $color_active-regular
+    box-shadow: 0px 0px 20px rgba(36, 163, 255, 0.5)
+    color: $color_hover-text
+    border-color: transparent
+    @include text-bold (1rem, 1.25rem)
+    transition: $trans
+    &:hover
+      @include btn-hover-trans
+
+
+
+.footer
+  background-color: $color_gray-bg
+  padding: 0px 0px 30px 0px
+  &:before
+    content: ''
+    display: block
+    height: 2px
+    margin: 0px auto 30px auto
+    background-color: $color_gray-separator
+    max-width: 1600px
+    padding: 0 15px
+  &__flex
+    display: flex
+    justify-content: space-between
+
+  &__info-adress ul
+    display: flex
+    margin-bottom: 21px
+    align-items: center
+    & li:not(:last-of-type):after
+      @include menu-dots-team
+    & li.regular
+      @include text-normal (1rem, 1.25rem)
+      color: $color_gray-text
+    & li.ft-link a
+      @include text-bold (0.75rem, 0.9375rem)
+      color: $color_active-regular
+      text-transform: uppercase
+      letter-spacing: 1px
+  &__info-contacts ul
+    display: flex
+    align-items: center
+    & li:not(:first-of-type):before
+      @include menu-dots-team
+    & li:nth-of-type(2) a
+      @include text-bold (1rem, 1.25rem)
+      color: $color_main-alt
+    & li:last-of-type a
+      text-decoration: none
+      @include text-bold (1rem, 1.25rem)
+      color: $color_active-regular
+      transition: $trans
+      &:hover
+        color: $color_accent-pink
+        transition: $trans
+    & li a>svg
+      fill: $color_active-regular
+      transition: $trans
+    & li a>svg:hover
+      fill: $color_accent-pink
+      transition: $trans
+  &__copyright-text
+    @include text-normal (1rem, 1.25rem)
+    color: $color_gray-text
