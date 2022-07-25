@@ -102,7 +102,7 @@ body .nav
   right: 0
   &-btn
     display: none
-    @media screen and (max-width: 375px)
+    @media screen and (max-width: 524px)
       display: block
   &__navigation
     position: relative
@@ -158,12 +158,9 @@ body .nav
       fill: $color_gray-separator
       border-radius: 8px
 
-
-
-
 .header
   background-color: $color_main-blue
-  @media screen and (max-width: 375px)
+  @media screen and (max-width: 524px)
     &:before
       content: ''
       height: 45px
@@ -186,10 +183,13 @@ body .nav
   &__logo-img
     @media screen and (max-width: 768px)
       margin-top: 56px
-    @media screen and (max-width: 375px)
-      margin-top: 0px
+    @media screen and (max-width: 626px)
       position: relative
       z-index: 2
+
+    @media screen and (max-width: 375px)
+      margin-top: 0px
+
     &:hover
       filter: drop-shadow(1px 1px 5px $color_block-text)
       transition: $trans
@@ -198,6 +198,9 @@ body .nav
     align-items: center
   &__logo-item-2
     margin-bottom: 30px
+    @media screen and (max-width: 626px)
+      position: relative
+      z-index: 2
     @media screen and (max-width: 375px)
       display: none
   &__info
@@ -216,7 +219,7 @@ body .nav
           top: 6%
           left: 9%
           z-index: 2
-        @media screen and (max-width: 375px)
+        @media screen and (max-width: 524px)
           top: 2%
           left: 4%
 
@@ -230,17 +233,17 @@ body .nav
           @include text-normal (1rem, 1.25rem)
           color: $color_hover-text
         & li.regular, & li a>svg
-          @media screen and (max-width: 375px)
+          @media screen and (max-width: 524px)
            display: none
         & li.regular + li a
           @include text-bold (1rem, 1.25rem)
           color: $color_hover-text
         & li.dot:after
           @include menu-dots
-          @media screen and (max-width: 375px)
+          @media screen and (max-width: 524px)
             @include no-dots
-        & li.position-375
-          @media screen and (max-width: 375px)
+        & li.position-375 a
+          @media screen and (max-width: 524px)
             width: 105px
             position: absolute
             top: 2%
@@ -265,7 +268,7 @@ body .nav
           transition: $trans
         & li:nth-of-type(3):after
           @include menu-dots
-          @media screen and (max-width: 375px)
+          @media screen and (max-width: 524px)
             @include no-dots
     &-navigation-list
       display: flex
@@ -274,7 +277,7 @@ body .nav
         justify-content: flex-start
         position: relative
         z-index: 2
-      @media screen and (max-width: 375px)
+      @media screen and (max-width: 524px)
         display: none
       & li:not(:last-of-type)
         margin-right: 15px
@@ -294,17 +297,20 @@ body .nav
 .main
   background: $color_gradient-superSoft
   min-height: 1000px
+
   &__letter
-    padding-bottom: 63%
-    @media screen and (max-width: 1366px)
+
+    //@media screen and (max-width: 1440px)
+      padding-bottom: 748px
+    //@media screen and (max-width: 1366px)
       padding-bottom: 64%
-    @media screen and (max-width: 1280px)
+    //@media screen and (max-width: 1280px)
       padding-bottom: 68%
-    @media screen and (max-width: 1024px)
+    //@media screen and (max-width: 1024px)
       padding-bottom: 86%
-    @media screen and (max-width: 768px)
+    //@media screen and (max-width: 768px)
       padding-bottom: 104%
-    @media screen and (max-width: 375px)
+    //@media screen and (max-width: 375px)
       padding-bottom: 132%
   &__letter-img img
     position: absolute
@@ -313,6 +319,15 @@ body .nav
     bottom: 0
     @media screen and (max-width: 375px)
       left: 0
+  &__letter-img picture
+    display: block
+    padding-bottom: 888px
+    @media screen and (max-width: 768px)
+      padding-bottom: 748px
+    @media screen and (max-width: 375px)
+      padding-bottom: 458px
+    @media screen and (max-width: 320px)
+      padding-bottom: 370px
   &__letter-label
     @include text-bold (2.375rem, 2.875rem)
     color: $color_hover-text
@@ -332,6 +347,10 @@ body .nav
       width: 560px
       left: calc(50% - 560px/2)
       top: calc(60% - 46px/2)
+    @media screen and (max-width: 626px)
+      width: 315px
+      left: calc(50% - 315px/2)
+      top: calc(50% - 138px/2)
     @media screen and (max-width: 375px)
       width: 315px
       left: calc(50% - 315px/2)
@@ -454,7 +473,7 @@ body .nav
     @media screen and (max-width: 768px)
       max-width: 45.333%
       margin-bottom: 30px
-    @media screen and (max-width: 375px)
+    @media screen and (max-width: 672px)
       max-width: 100%
 
   &-link
@@ -775,7 +794,7 @@ div.swiper-horizontal>.swiper-pagination-bullets,
     display: flex
     justify-content: space-between
     position: relative
-    @media screen and (max-width: 375px)
+    @media screen and (max-width: 630px)
       display: block
       max-width: 100%
       text-align: center
@@ -783,13 +802,13 @@ div.swiper-horizontal>.swiper-pagination-bullets,
     display: flex
     margin-bottom: 21px
     align-items: center
-    @media screen and (max-width: 375px)
+    @media screen and (max-width: 630px)
       display: block
       max-width: 100%
 
     & li:not(:last-of-type):after
       @include menu-dots-team
-      @media screen and (max-width: 375px)
+      @media screen and (max-width: 630px)
         @include no-dots
     & li.regular
       @include text-normal (1rem, 1.25rem)
@@ -802,12 +821,12 @@ div.swiper-horizontal>.swiper-pagination-bullets,
   &__info-contacts ul
     display: flex
     align-items: center
-    @media screen and (max-width: 375px)
+    @media screen and (max-width: 630px)
       display: block
       max-width: 100%
       margin-bottom: 21px
     & li
-      @media screen and (max-width: 375px)
+      @media screen and (max-width: 630px)
         margin-bottom: 10px
 
 
@@ -815,7 +834,7 @@ div.swiper-horizontal>.swiper-pagination-bullets,
       display: inline-block
     & li:not(:first-of-type):before
       @include menu-dots-team
-      @media screen and (max-width: 375px)
+      @media screen and (max-width: 630px)
         @include no-dots
     & li:nth-of-type(2) a
       @include text-bold (1rem, 1.25rem)
@@ -845,5 +864,5 @@ div.swiper-horizontal>.swiper-pagination-bullets,
         position: absolute
         top: 0
         right: 0
-      @media screen and (max-width: 375px)
+      @media screen and (max-width: 630px)
         position: static
